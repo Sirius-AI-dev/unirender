@@ -1,7 +1,14 @@
 # Unirender v1.1.0
 
-> The goal of this package is to convert a config file (local or remote)
-> into a web page instantly
+> The goal of this package is to convert a UniRender config file (local or remote)
+> into a web page instantly. JSON format of this file is described under **"Wiki"** section
+
+
+## Quick deploy
+1. Copy **"build"** folder to your web server
+2. Setup a correct **API host and path** in index.html
+3. Add any business-logic on backend. The main rules are described under **"Wiki"** section
+
 
 ## Installation
 
