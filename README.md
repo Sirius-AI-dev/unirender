@@ -7,7 +7,7 @@
 ## Quick deploy
 > 1. Copy **"build"** folder to your web server
 > 2. Setup a correct **API host** in index.html, e.g. "https://api.my_domain.app"
-> 3. Support an API host "/ub/render" for the API host: all API request will be sent with this API path
+> 3. Support a POST API "/ub/render" for the API host: all API requests will be sent with this API path
 > 4. Add any business-logic on backend. The main rules are described under **"Wiki"** section
 
 
