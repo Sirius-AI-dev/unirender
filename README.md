@@ -1,18 +1,17 @@
 # UniRender
 
-UniRender is a compact JavaScript library that provides full rendering and business logic for web and mobile applications using a special configuration in JSON format.
+UniRender is a compact JavaScript library that provides **full rendering and business logic** for web and mobile applications using a special config in JSON format.
 
-This approach significantly simplifies project development (especially complex ones) by removing two layers:
+This approach significantly simplifies project development (especially complex ones) by **removing two layers**:
 *   Frontend business logic
 *   API layer for interaction between frontend and backend
 
-Currently, the VUE framework is supported for rendering, with components from the PrimeVUE package. Custom components can be added as needed.
+Currently, the [VUE framework](https://vuejs.org/) is supported for rendering, with components from the [PrimeVUE package](https://primevue.org/introduction/). Custom components can be added as needed.
 
-The modular architecture of the project allows for easy addition of new components and new frameworks (React, React Native, etc.). Contributors are welcome to participate in the project's development.
+The modular architecture of the project allows for easy addition of new components and new frameworks (React, React Native, etc.). **Contributors are welcome to participate in the project's development**.
 
 ## Table of Contents
 
-*   [What is UniRender](#what-is-unirender)
 *   [How it Works](#how-it-works)
 *   [Advantages of the Backend-Driven Approach](#advantages-of-the-backend-driven-approach)
     *   [System Simplification](#system-simplification)
@@ -70,33 +69,21 @@ The modular architecture of the project allows for easy addition of new componen
 
 ---
 
-## What is UniRender
-
-UniRender is a compact JavaScript library that provides full rendering and business logic for Web and mobile applications using a special configuration in JSON format.
-
-This approach significantly simplifies project development (especially complex ones) by removing two layers:
-*   Frontend business logic
-*   API layer for interaction between frontend and backend
-
-Currently, the VUE framework is supported for rendering, with components from the PrimeVUE package. Custom components can be added as needed.
-
-The modular architecture of the project allows for easy addition of new components and new frameworks (React, React Native, etc.). Contributors are welcome to participate in the project's development.
-
 ## How it Works
 
-1.  Upon the first visit to the site, `index.html`, which is only 400 bytes in size, is loaded. This file loads the `unirender.js` library and specifies the API URL for backend interaction.
+1.  Upon the first visit to the site, `index.html`, which is **only 400 bytes** in size, is loaded. This file loads the `unirender.js` library and specifies the **unified API URL** for backend interaction.
 
 2.  UniRender immediately sends a request to the API URL, along with referer, user-agent, and other session attributes.
 
-3.  In response, the backend sends a **UniRender config**, containing a flat list of all elements, their structural placement, attribute values, and necessary methods for events that are handled on that page.
+3.  In response, the backend sends a [**UniRender config**](#unirender-config-format-detailed), containing a flat list of all [elements](#element), their structural placement, attribute values, and necessary methods for events that are handled on that page.
 
-4.  UniRender processes the received UniRender config, unpacks keys into Storage, and initiates rendering using VUE (or another framework). **Important: all components must be reactive.**
+4.  UniRender processes the received [UniRender config](#unirender-config-format-detailed), unpacks keys into [Storage](#structure-of-storage), and initiates rendering using VUE (or another framework). **Important: all components must be reactive.**
 
-5.  When an event is triggered, UniRender executes the specified JavaScript code for the event, or it executes the UniRender function `window.uni.switch()`, which collects the necessary keys from Storage and calls the API URL.
+5.  When an event is triggered, UniRender executes the specified JavaScript code for the event, or it executes the UniRender function [`window.uni.switch()`](#function-windowuniswitch), which collects the necessary keys from [Storage](#structure-of-storage) and calls the API URL.
 
-6.  In response, the backend sends a new UniRender config, containing keys only for the elements that need to be updated (or added), along with new attribute values. Typically, this involves only a few dozen elements.
+6.  In response, the backend sends a new [UniRender config](#unirender-config-format-detailed), containing keys only for the [elements](#element) that need to be updated (or added), along with new attribute values. Typically, this involves only a few dozen elements.
 
-7.  UniRender processes the received UniRender config and unpacks the keys into Storage. Since all components are reactive, the data is immediately updated on the web page.
+7.  UniRender processes the received [UniRender config](#unirender-config-format-detailed) and unpacks the keys into [Storage](#structure-of-storage). Since all components are reactive, the data is immediately updated on the web page.
 
 Thus, all project business logic is moved to the backend. This is known as the **Backend-Driven approach**.
 
@@ -104,7 +91,7 @@ Thus, all project business logic is moved to the backend. This is known as the *
 
 ### System Simplification
 
-Removes two complex layers: frontend business logic + API layer.
+**Removes two complex layers**: frontend business logic + API layer.
 
 ### Decomposition of Large Tasks
 
@@ -126,7 +113,7 @@ Detailed context for the entire project in a language understandable by LLMs:
 
 You can embed UniRender forms into any existing landing page / website without overhauling the entire site. Simply load `unirender.js` into a `<div>` container and set the correct `apiHost`.
 
-This allows expanding existing products created with No Code / Low Code builders, adding business logic of any complexity.
+This allows **expanding existing products created with No Code / Low Code builders**, adding business logic of any complexity.
 
 ### Template Library with Complex Business Logic
 
@@ -138,13 +125,13 @@ In the classical approach, implementing complex templates requires integration o
 
 The goal is to make the interface as convenient as possible for a specific user.
 
-In a backend-driven solution, not only text but also the set of components, their arrangement, colors, styles, and any other attributes can be easily changed. The customization logic can be determined with the help of AI.
+In a backend-driven solution, not only text but also the set of components, their arrangement, colors, styles, and any other attributes can be easily changed. **The customization logic can be determined with the help of AI.**
 
 Any page on a site is critical. And any of them can be optimized not manually, but with AI. And any of them can and should be optimized not generally – but adapted to each visitor, taking into account their profile, where they came to the site from now, and the history of their past visits.
 
 ### Dynamic Containers
 
-Automatic generation of multi-level admin panels from data structure descriptions. Flexible visualization settings at both the individual field level and the field set level.
+Automatic generation of **multi-level admin panels from data structure** descriptions. Flexible visualization settings at both the individual field level and the field set level.
 
 A Product Manager gets a full-fledged CMS already at the project development stage – each new entity and field is automatically ready for population.
 
@@ -153,10 +140,10 @@ A Product Manager gets a full-fledged CMS already at the project development sta
 ### Component
 
 A JavaScript component of the corresponding framework (VUE / React / etc):
-*   Saved in UMD format, with all necessary dependencies.
+*   Saved in [.umd](https://github.com/umdjs/umd) format, with all necessary dependencies.
 *   Accessible via a public URL.
 *   Reactive: display automatically changes when any properties change.
-*   Component styling rules are described in the "Component Structure" section (Note: "Component Structure" section details are not provided in this document).
+*   Component wrapping rules are described in the "[Component Wrapper](#component-wrapper)" section
 
 ### Element
 
@@ -168,10 +155,10 @@ An instance of a component within a specific View:
 
 ### View
 
-One or more related Elements:
+One or more related [elements](#element):
 *   Can be assigned one or more URL paths (for direct access via the address bar).
-*   A separate UMD file is not created for a View.
-*   Can be cloned into a container element of another View. In this case, a prefix is added to the key of each element in the cloned View to keep the keys of the added elements unique within the View.
+*   A separate .umd file **is not created** for a View.
+*   Can be cloned into a container [element](#element) of another View. In this case, a prefix is added to the key of each [element](#element) in the cloned View to keep the keys of the added elements unique within the View.
 *   Can contain its own `head[]` with styles and scripts.
 *   Can be embedded in a `<div>` container of any website.
 
@@ -181,24 +168,24 @@ A logically complete construct consisting of one or more View(s). A project can 
 
 ### UniRender Config
 
-A JSON object that describes all Elements and their attributes and methods, as well as auxiliary data and the URL for display in the address bar.
+A JSON object that describes all [elements](#element) and their attributes and methods, as well as auxiliary data and the URL for display in the address bar.
 
 ### Storage
 
-A JSON object in browser storage that stores Element settings (`attributes`, `options`, `methods`), dynamic data (input fields, table cells, etc.), and auxiliary data.
+A [JSON object](#structure-of-storage) in browser storage that stores Element settings (`attributes`, `options`, `methods`), dynamic data (input fields, table cells, etc.), and auxiliary data.
 
 ### UniRender (JS Library)
 
 The JavaScript library for the following tasks:
-*   Interaction with the backend, including sending and receiving UniRender Config.
+*   Interaction with the backend, including sending and receiving [UniRender config](#unirender-config-format-detailed).
 *   Rendering Elements, including loading Components in `.umd` format.
-*   Creating and updating Storage based on data received from the backend.
+*   Creating and updating [Storage](#structure-of-storage) based on data received from the backend.
 
 ## Installation
 
 ### Quick Deploy
 
-1.  Install the UniRender project or just copy the “Build” folder into your Web project.
+1.  Copy the “Build” folder into your Web project.
     Dependencies are minimum:
     *   `"axios": "^1.6.0"`
     *   `"jsonpath-plus": "^7.2.0"`
@@ -277,24 +264,25 @@ await uniRender.start();
 
 ## Examples
 
-### UniRender Configs
+### UniRender config builder: [https://dev.unibackend.com/config](https://dev.unibackend.com/config)
 
-**UniRender config builder**: [https://dev.unibackend.com/config](https://dev.unibackend.com/config)
-View [UniRender config]
+View [UniRender config](https://github.com/Sirius-AI-dev/unirender/blob/main/examples/UniRender%20config/build_config.json)
 
-You can make changes in the UniRender config to change layout in the right part of the screen.
+You can make changes in the [UniRender config](#unirender-config-format-detailed) to change layout in the right part of the screen.
 
 ### Interactive Components
 
-**Demo with interactive components**: [https://dev.unibackend.com/demo](https://dev.unibackend.com/demo)
-View [UniRender config]
+Demo with interactive components: [https://dev.unibackend.com/demo](https://dev.unibackend.com/demo)
 
-Click buttons to change elements layout and attributes.
+View [UniRender config](https://github.com/Sirius-AI-dev/unirender/blob/main/examples/UniRender%20config/demo_config.json)
+
+Click buttons to change [elements](#element) layout and attributes.
 
 ### Tokling.com
 
-**Multiplayer word battles to practise 42 foreign languages**: [https://tokling.com](https://tokling.com)
-View [UniRender config]
+Multiplayer word battles to practise 42 foreign languages: [https://tokling.com](https://tokling.com)
+
+View [UniRender config](https://github.com/Sirius-AI-dev/unirender/blob/main/examples/UniRender%20config/toking_config.json)
 
 You can check http requests and responses in the Developer Console to understand the UniRender principles better. Pay attention, that all requests in all the projects have the same format.
 
@@ -322,39 +310,8 @@ TBD
 
 That’s all! Now your frontend is ready for work.
 
-### Backend Response Format
 
-The response includes the UniRender Config, which may contain all or part of the following sections:
-
-*   `composition`: An object specifying the list of top-level elements:
-    ```json
-    {
-      "point": "<name of the topmost component>",
-      "title": "",
-      "css": [],
-      "js": [],
-      "config_url": "<optional: .json file with UniRender config>"
-    }
-    ```
-*   `components`: A flat list of all elements on the page. All container elements specify which elements are included in them. The nesting level is unlimited.
-*   `store`: An object with dynamic keys; each element can have from 0 to several such keys. For example, a button might not have such a key, but a table has a key with an array of data (objects), a key for storing a list of selected records, a key with sort statuses, etc.
-*   `methods`: An object with methods that handle the necessary element events. Typically, this is a call to the `window.uni.switch()` function.
-*   `service`: An object with auxiliary keys; these keys are not processed on the frontend.
-*   `url`: An object with the URL of the current page; this URL can include various parameters:
-    ```json
-    {
-      "protocol": "https", // optional
-      "host": "<my_domain.org>", // optional
-      "path": "/path/to/part",
-      "parameters": "params", // string, optional
-      "anchor": "#myhash", // string, optional
-      "target": "blank", // string, optional
-      "tab_id": "active browser tab ID"
-    }
-    ```
-*   `actions`: `[{<action to run>}]` (Array of action objects.)
-
-### Request to Backend Format
+### API Request Format
 
 API request parameters from `window.uni.switch()`:
 
@@ -369,7 +326,7 @@ API request parameters from `window.uni.switch()`:
       "tab_id": "active browser tab ID"
     }
     ```
-*   `query`: `{ <required keys and values from Storage, event, and props> }`
+*   `query`: `{ <required keys and values from [Storage](#structure-of-storage), event, and props> }`
     Example:
     ```json
     {
@@ -401,35 +358,67 @@ API request parameters from `window.uni.switch()`:
     }
     ```
 
+### API Response Format
+
+The response includes the [UniRender config](#unirender-config-format-detailed), which may contain all or part of the following sections:
+
+*   `composition`: An object specifying the list of top-level [elements](#element):
+    ```json
+    {
+      "point": "<name of the topmost component>",
+      "title": "",
+      "css": [],
+      "js": [],
+      "config_url": "<optional: .json file with [UniRender config](#unirender-config-format-detailed)>"
+    }
+    ```
+*   `components`: A flat list of all [elements](#element) on the page. All container [elements](#element) specify which elements are included in them. The nesting level is unlimited.
+*   `store`: An object with dynamic keys; each [elements](#element) can have from 0 to several such keys. For example, a button might not have such a key, but a table has a key with an array of data (objects), a key for storing a list of selected records, a key with sort statuses, etc.
+*   `methods`: An object with methods that handle the necessary [elements](#element) events. Typically, this is a call to the `window.uni.switch()` function.
+*   `service`: An object with auxiliary keys; these keys are not processed on the frontend.
+*   `url`: An object with the URL of the current page; this URL can include various parameters:
+    ```json
+    {
+      "protocol": "https", // optional
+      "host": "<my_domain.org>", // optional
+      "path": "/path/to/part",
+      "parameters": "params", // string, optional
+      "anchor": "#myhash", // string, optional
+      "target": "blank", // string, optional
+      "tab_id": "active browser tab ID"
+    }
+    ```
+*   `actions`: `[{<action to run>}]` (Array of action objects.)
+
 ### Logic of UniRender Operation
 
 1.  Upon first launch, it contacts the backend via the API URL. The request sends the "url" and "uniData" sections.
 2.  Upon receiving a response from the backend:
-    *   Unpacks keys into Storage.
-    *   During the first launch, it renders elements. Subsequently, element visualization changes due to component reactivity.
+    *   Unpacks keys into [Storage](#structure-of-storage).
+    *   During the first launch, it renders [elements](#element). Subsequently, element visualization changes due to component reactivity.
     *   Executes actions.
-    *   For elements with methods, it adds events that execute the `window.uni.switch()` function or a JavaScript script.
+    *   For [elements](#element) with methods, it adds events that execute the `window.uni.switch()` function or a JavaScript script.
 3.  When the `switch()` function is called, it forms and sends a request to the backend. Upon receiving a response, it proceeds to step 2.
 
 ## Structure of Storage
 
 The Storage JSON object has the following sections:
 
-*   `"components"`: Stores the settings for all elements. For each element, it specifies which keys in `"store"` and `"methods"` it is linked to.
+*   `"components"`: Stores the settings for all [elements](#element). For each [element](#element), it specifies which keys in `"store"` and `"methods"` it is linked to.
 *   `"methods"`: A list of methods with JavaScript code. Typically, this is a call to the `window.uni.switch()` function.
 *   `"params"`: `{"initUrl", "apiHost"}`
-*   `"store"`: Dynamic data that changes with the element (input field content, selected records, etc.).
+*   `"store"`: Dynamic data that changes with the [element](#element) (input field content, selected records, etc.).
 *   `"service"`: An object with auxiliary data. A checksum is also saved for consistency verification.
 *   `"config"`: The current config from the server, excluding `store` and `service`.
 
 ## Function `window.uni.switch()`
 
-For handling methods (e.g., a button click), the `window.uni.switch()` function is used, through which all elements can interact with the backend.
+For handling methods (e.g., a button click), the `window.uni.switch()` function is used, through which all [elements](#element) can interact with the backend.
 
-Parameters for calling `window.uni.switch()` from an element:
+Parameters for calling `window.uni.switch()` from an [element](#element):
 
 *   `event`: Event object - mandatory.
-*   `props`: Props passed to the element from which the event was called - mandatory.
+*   `props`: Props passed to the [element](#element) from which the event was called - mandatory.
 *   `uniKeys`: A list of keys from Storage, event, and props, whose values need to be sent in the request to the backend. Regex can be used - optional.
     *   Each key like `"components.my_element_1.attributes.label"` should be passed as an array of arrays:
         ```json
@@ -489,8 +478,8 @@ Deletes all keys specified in the `key[]` array, from the section: `"store"` \| 
 }
 ```
 **Result:**
-1.  All elements from "components" whose `element_key` starts with "filter_" are deleted.
-2.  The element with `element_key` = "key_01" is deleted.
+1.  All [elements](#element) from "components" whose `element_key` starts with "filter_" are deleted.
+2.  The [element](#element) with `element_key` = "key_01" is deleted.
 
 ### 2. `update` (or alias `jsonpath_update`)
 
@@ -542,7 +531,7 @@ Saves the specified keys to the client's `localStorage`. Subsequently, values sa
 
 ### 5. `config`
 
-Loads UniRender config from a file. Convenient for quickly displaying a web page.
+Loads [UniRender config](#unirender-config-format-detailed) from a file. Convenient for quickly displaying a web page.
 
 **Example:**
 ```json
@@ -555,7 +544,7 @@ Loads UniRender config from a file. Convenient for quickly displaying a web page
 
 ### 6. `trigger`
 
-Executes a method on a specific element.
+Executes a method on a specific [element](#element).
 
 **Example:**
 ```json
@@ -572,7 +561,7 @@ Executes a method on a specific element.
 
 ### 7. `seqApply`
 
-Applies the UniRender config step-by-step, with timeline support. This allows for demonstrations (showing order of actions) and animations (rapid changes in colors / element sizes, hiding / showing, gradual changes in values, etc.).
+Applies the [UniRender config](#unirender-config-format-detailed) step-by-step, with timeline support. This allows for demonstrations (showing order of actions) and animations (rapid changes in colors / element sizes, hiding / showing, gradual changes in values, etc.).
 
 **Example:**
 ```json
@@ -598,7 +587,7 @@ Ability to embed UniRender into any website:
 <div id="unirender1"></div>
 <div id="unirender2"></div>
 ```
-UniRender config will be rendered in these containers.
+[UniRender config](#unirender-config-format-detailed) will be rendered in these containers.
 
 How to connect UniRender:
 1.  In the `<head>`: `<script src="<URL to load unirender.js>"></script>`
@@ -627,11 +616,11 @@ This provides the following capabilities:
 
 ### `components` (JSON-object)
 
-Contains all elements necessary for rendering. Each element has a unique name, consisting only of Latin letters, numbers, and the symbols `_`, `-`, `~`, `#`.
+Contains all [elements](#element) necessary for rendering. Each [element](#element) has a unique name, consisting only of Latin letters, numbers, and the symbols `_`, `-`, `~`, `#`.
 
 The element's name is the key of the `components` JSON object.
 
-Properties of each element:
+Properties of each [element](#element):
 *   `key` (string): Unique name of the element. Must match the component's key in `components` (mandatory).
 *   `url` (string): Full link to the `.umd` file of the component (mandatory).
 *   `attributes` (object): Object with the element's main attributes, their names strictly defined in the base component (e.g., `label`, `style`). Only properties passed to the original component are listed here (mandatory).
@@ -646,7 +635,7 @@ Properties of each element:
 The entry point to the application.
 
 Properties of `composition`:
-*   `point` (string): Indicates the name of the main (parent) element. The page's DOM is built from this element.
+*   `point` (string): Indicates the name of the main (parent) [element](#element).
 *   `title` (string): Page title.
 *   `head`: (array of objects)
     *   `type` (string): Can contain the following values: `script`, `style`, `link`, `meta`.
@@ -668,13 +657,13 @@ In `head` are loaded page settings. Static data for all project pages can be loa
 
 A call to `window.uni.switch()` or any JavaScript code that is executed by this method.
 
-The key of the `methods` object is the method name, as specified in "methods" when describing the element (e.g., `"element_1-click"`).
+The key of the `methods` object is the method name, as specified in "methods" when describing the [element](#element) (e.g., `"element_1-click"`).
 
 The property of the `methods` object is executable JavaScript code.
 
 When calling the function `window.uni.switch()`, the following parameters can be passed:
 
-*   `uniKeys`: A list of keys from Storage, event, and props, whose values need to be sent in the request to the backend. Regex can be used (optional).
+*   `uniKeys`: A list of keys from [Storage](#structure-of-storage), event, and props, whose values need to be sent in the request to the backend. Regex can be used (optional).
     *   Each key like `"components.my_element_1.attributes.label"` should be passed as an array of arrays:
         ```json
         [
@@ -703,7 +692,7 @@ When calling the function `window.uni.switch()`, the following parameters can be
 Properties of `store`:
 All components refer to this. Property names are the same as the `store` value of the element.
 
-**Example `store` reference within an element:**
+**Example `store` reference within an [element](#element):**
 ```json
 {
   "input_text_1": {
@@ -754,7 +743,7 @@ A wrapper is (usually) a renderless component that has no layout but simply pass
 
 ### Store (Component-Specific)
 
-Each element has only one store. Anything can be created inside it. An element must refer to its store – typically, this is an object within `Storage.store`, with a key matching the element's name.
+Each [element](#element) has only one store. Anything can be created inside it. An [element](#element) must refer to its store – typically, this is an object within `Storage.store`, with a key matching the element's name.
 
 From the wrapper, the store arrives at the component as a reactive `data` object. From there, you can take what is needed: `data.input`, `data.selected`, etc.
 
@@ -774,7 +763,7 @@ const propsList = {
 
 ### Methods (Component-Specific)
 
-An element can have many methods. They are described in UniRender-config, inside the `"components"` object:
+An [element](#element) may have many methods. They are described in UniRender-config, inside the `"components"` object:
 ```json
 {
   "components": {
