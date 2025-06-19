@@ -1,0 +1,609 @@
+{
+    "actions": [],
+    "components": {
+        "button_main": {
+            "attributes": {
+                "hidden": false,
+                "iconPos": "left",
+                "label": "My button",
+                "style": {
+                    "margin-left": "200px"
+                }
+            },
+            "components": [],
+            "css": [],
+            "key": "button_main",
+            "methods": {
+                "click": "button_main-click"
+            },
+            "options": {
+                "useComponent": true
+            },
+            "store": "button_main",
+            "url": "https://components.unibackend.com/dev/Button/Button-v0.umd.min.js"
+        },
+        "datatable_main": {
+            "attributes": {
+                "columnResizeMode": "fit",
+                "filterDisplay": "menu",
+                "hidden": false,
+                "lazy": true,
+                "removableSort": true,
+                "reorderableColumns": false,
+                "resizableColumns": false,
+                "rowHover": false,
+                "showGridlines": false,
+                "stateStorage": "session",
+                "stripedRows": false
+            },
+            "components": [
+                {
+                    "attributes": {
+                        "field": "name",
+                        "header": "Name",
+                        "showClearButton": false,
+                        "showFilterMatchModes": false,
+                        "showFilterMenu": true,
+                        "showFilterOperator": false,
+                        "sortable": true
+                    },
+                    "key": "datatable_main_column_name",
+                    "options": {
+                        "filter": {
+                            "params": {},
+                            "type": "input"
+                        },
+                        "useComponent": false
+                    }
+                },
+                {
+                    "attributes": {
+                        "field": "address",
+                        "header": "User's address",
+                        "showClearButton": false,
+                        "showFilterMatchModes": false,
+                        "showFilterMenu": true,
+                        "showFilterOperator": false,
+                        "sortable": true
+                    },
+                    "key": "datatable_main_column_address",
+                    "options": {
+                        "filter": {
+                            "params": {}
+                        },
+                        "useComponent": false
+                    }
+                }
+            ],
+            "css": [],
+            "customizable": false,
+            "key": "datatable_main",
+            "methods": {},
+            "options": {
+                "contextMenu": {
+                    "dynamic": false,
+                    "enabled": false
+                },
+                "useComponent": true
+            },
+            "store": "datatable_main",
+            "url": "https://components.unibackend.com/dev/DataTable/DataTable-v0.umd.min.js"
+        },
+        "datatable_main_column_address": {
+            "attributes": {
+                "field": "address",
+                "header": "User's address"
+            },
+            "components": [],
+            "css": [],
+            "key": "datatable_main_column_address",
+            "methods": {},
+            "options": {
+                "useComponent": false
+            },
+            "store": "datatable_main_column_address",
+            "url": "https://components.unibackend.com/dev/Span/Span-v0.umd.min.js"
+        },
+        "datatable_main_column_name": {
+            "attributes": {
+                "field": "name",
+                "header": "Name"
+            },
+            "components": [],
+            "css": [],
+            "key": "datatable_main_column_name",
+            "methods": {},
+            "options": {
+                "filter": {
+                    "type": "input"
+                },
+                "useComponent": false
+            },
+            "store": "datatable_main_column_name",
+            "url": "https://components.unibackend.com/dev/Span/Span-v0.umd.min.js"
+        },
+        "dropdown_container": {
+            "attributes": {
+                "hidden": false,
+                "style": {
+                    "display": "flex",
+                    "flex-direction": "column",
+                    "gap": ".3rem",
+                    "margin-bottom": ".5rem"
+                }
+            },
+            "components": [
+                {
+                    "key": "dropdown_label"
+                },
+                {
+                    "key": "dropdown_value"
+                }
+            ],
+            "css": [],
+            "customizable": false,
+            "key": "dropdown_container",
+            "methods": {},
+            "options": {
+                "useComponent": true
+            },
+            "store": "dropdown_container",
+            "url": "https://components.unibackend.com/dev/Container/Container-v0.umd.min.js"
+        },
+        "dropdown_label": {
+            "attributes": {
+                "style": {
+                    "color": "grey",
+                    "font-size": "14px"
+                }
+            },
+            "components": [],
+            "css": [],
+            "key": "dropdown_label",
+            "methods": {},
+            "options": {
+                "useComponent": false
+            },
+            "store": "dropdown_label",
+            "url": "https://components.unibackend.com/dev/Span/Span-v0.umd.min.js"
+        },
+        "dropdown_value": {
+            "attributes": {
+                "disabled": false,
+                "optionLabel": "label",
+                "optionValue": "id",
+                "placeholder": "select a city",
+                "showClear": true,
+                "style": {}
+            },
+            "components": [],
+            "css": [],
+            "key": "dropdown_value",
+            "methods": {
+                "change": "dropdown_value-change"
+            },
+            "options": {
+                "readonly": false,
+                "useComponent": true
+            },
+            "store": "dropdown_value",
+            "url": "https://components.unibackend.com/dev/Dropdown/Dropdown-v0.umd.min.js"
+        },
+        "input_text_container": {
+            "attributes": {
+                "hidden": false,
+                "style": {
+                    "display": "flex",
+                    "flex-direction": "column",
+                    "gap": ".3rem",
+                    "margin-bottom": ".5rem"
+                }
+            },
+            "components": [
+                {
+                    "key": "input_text_label"
+                },
+                {
+                    "key": "input_text_value"
+                }
+            ],
+            "css": [],
+            "customizable": false,
+            "key": "input_text_container",
+            "methods": {},
+            "options": {
+                "useComponent": true
+            },
+            "store": "input_text_container",
+            "url": "https://components.unibackend.com/dev/Container/Container-v0.umd.min.js"
+        },
+        "input_text_label": {
+            "attributes": {
+                "style": {
+                    "color": "grey",
+                    "font-size": "14px"
+                }
+            },
+            "components": [],
+            "css": [],
+            "key": "input_text_label",
+            "methods": {},
+            "options": {
+                "useComponent": false
+            },
+            "store": "input_text_label",
+            "url": "https://components.unibackend.com/dev/Span/Span-v0.umd.min.js"
+        },
+        "input_text_value": {
+            "attributes": {
+                "autofocus": false,
+                "disabled": false,
+                "placeholder": "input your name",
+                "style": {}
+            },
+            "components": [],
+            "css": [],
+            "key": "input_text_value",
+            "methods": {},
+            "options": {
+                "readonly": false,
+                "useComponent": true
+            },
+            "store": "input_text_value",
+            "url": "https://components.unibackend.com/dev/InputText/InputText-v0.umd.min.js"
+        },
+        "result_container": {
+            "attributes": {
+                "style": {
+                    "display": "flex",
+                    "flex-direction": "column",
+                    "margin-left": "32px"
+                }
+            },
+            "components": [
+                {
+                    "key": "result_display_container"
+                }
+            ],
+            "css": [],
+            "customizable": false,
+            "key": "result_container",
+            "methods": {},
+            "options": {
+                "useComponent": true
+            },
+            "store": "result_container",
+            "url": "https://components.unibackend.com/dev/Container/Container-v0.umd.min.js"
+        },
+        "result_display_container": {
+            "attributes": {
+                "style": {
+                    "display": "flex",
+                    "flex-direction": "column"
+                }
+            },
+            "components": [
+                {
+                    "key": "datatable_main"
+                },
+                {
+                    "key": "textarea_container"
+                },
+                {
+                    "key": "dropdown_container"
+                },
+                {
+                    "key": "input_text_container"
+                },
+                {
+                    "key": "button_main"
+                }
+            ],
+            "css": [],
+            "customizable": false,
+            "key": "result_display_container",
+            "methods": {},
+            "options": {
+                "useComponent": true
+            },
+            "store": "result_display_container",
+            "url": "https://components.unibackend.com/dev/Container/Container-v0.umd.min.js"
+        },
+        "textarea_container": {
+            "attributes": {
+                "hidden": false,
+                "style": {
+                    "display": "flex",
+                    "flex-direction": "column",
+                    "gap": ".3rem",
+                    "margin-bottom": ".5rem"
+                }
+            },
+            "components": [
+                {
+                    "key": "textarea_label"
+                },
+                {
+                    "key": "textarea_value"
+                }
+            ],
+            "css": [],
+            "customizable": false,
+            "key": "textarea_container",
+            "methods": {},
+            "options": {
+                "useComponent": true
+            },
+            "store": "textarea_container",
+            "url": "https://components.unibackend.com/dev/Container/Container-v0.umd.min.js"
+        },
+        "textarea_label": {
+            "attributes": {
+                "style": {
+                    "color": "grey",
+                    "font-size": "14px"
+                }
+            },
+            "components": [],
+            "css": [],
+            "key": "textarea_label",
+            "methods": {},
+            "options": {
+                "useComponent": false
+            },
+            "store": "textarea_label",
+            "url": "https://components.unibackend.com/dev/Span/Span-v0.umd.min.js"
+        },
+        "textarea_value": {
+            "attributes": {
+                "autoResize": false,
+                "class": [],
+                "cols": 30,
+                "disabled": false,
+                "placeholder": "Input text",
+                "rows": 4,
+                "style": {}
+            },
+            "components": [],
+            "css": [],
+            "key": "textarea_value",
+            "methods": {
+                "blur": "textarea_value-blur"
+            },
+            "options": {
+                "tooltip": {
+                    "position": "left",
+                    "showDelay": 500,
+                    "value": ""
+                },
+                "useComponent": true,
+                "validation": {
+                    "status": false
+                }
+            },
+            "store": "textarea_value",
+            "url": "https://components.unibackend.com/dev/Textarea/Textarea-v0.umd.min.js"
+        },
+        "ub_config_container": {
+            "attributes": {
+                "style": {
+                    "height": "calc(100vh - 80px)",
+                    "width": "640px"
+                }
+            },
+            "components": [
+                {
+                    "key": "ur_config_json"
+                },
+                {
+                    "key": "ur_config_buttons_cnt"
+                }
+            ],
+            "css": [],
+            "customizable": false,
+            "key": "ub_config_container",
+            "methods": {},
+            "options": {
+                "useComponent": true
+            },
+            "store": "ub_config_container",
+            "url": "https://components.unibackend.com/dev/Container/Container-v0.umd.min.js"
+        },
+        "ub_main_container": {
+            "attributes": {
+                "style": {
+                    "display": "flex",
+                    "flex-direction": "row"
+                }
+            },
+            "components": [
+                {
+                    "key": "ub_config_container"
+                },
+                {
+                    "key": "result_container"
+                }
+            ],
+            "css": [],
+            "customizable": false,
+            "key": "ub_main_container",
+            "methods": {},
+            "options": {
+                "useComponent": true
+            },
+            "store": "ub_main_container",
+            "url": "https://components.unibackend.com/dev/Container/Container-v0.umd.min.js"
+        },
+        "ur_apply_button": {
+            "attributes": {
+                "iconPos": "left",
+                "label": "Apply config",
+                "style": {
+                    "margin-left": "200px"
+                }
+            },
+            "components": [],
+            "css": [],
+            "key": "ur_apply_button",
+            "methods": {
+                "click": "ur_apply_button-click"
+            },
+            "options": {
+                "useComponent": true
+            },
+            "store": "ur_apply_button",
+            "url": "https://components.unibackend.com/dev/Button/Button-v0.umd.min.js"
+        },
+        "ur_config_buttons_cnt": {
+            "attributes": {
+                "style": {
+                    "margin-top": "20px"
+                }
+            },
+            "components": [
+                {
+                    "key": "ur_apply_button"
+                }
+            ],
+            "css": [],
+            "customizable": false,
+            "key": "ur_config_buttons_cnt",
+            "methods": {},
+            "options": {
+                "useComponent": true
+            },
+            "store": "ur_config_buttons_cnt",
+            "url": "https://components.unibackend.com/dev/Container/Container-v0.umd.min.js"
+        },
+        "ur_config_json": {
+            "attributes": {
+                "style": {
+                    "height": "100%"
+                }
+            },
+            "components": [],
+            "css": [],
+            "key": "ur_config_json",
+            "methods": {},
+            "options": {
+                "theme": "monokai",
+                "useComponent": true
+            },
+            "store": "ur_config_json",
+            "url": "https://components.unibackend.com/dev/AceEditor/AceEditor-v0.umd.min.js"
+        }
+    },
+    "composition": {
+        "head": [
+            {
+                "attributes": {
+                    "defer": true
+                },
+                "id": "default_js",
+                "src": "https://components.unibackend.com/dev/default.js",
+                "type": "script"
+            }
+        ],
+        "points": {
+            "#app": "ub_main_container"
+        },
+        "title": "Demo ChatGPT & UniRender",
+        "version": "2.5.1"
+    },
+    "durationMSec": 21.396875381469727,
+    "methods": {
+        "button_main-click": "(event) => { window.uni.switch({ apiUrl:'/ub/render', uniKeys: [[[\"exact\", \"service\"], [\"exact\", \"ubBasic\"]],[[\"exact\", \"service\"], [\"exact\", \"ubDynamic\"]],[[\"exact\", \"props\"], [\"exact\", \"componentKey\"]],[[\"exact\", \"components\"], [\"exact\", \"button_main\"], [\"exact\", \"methods\"], [\"exact\", \"click\"]],[[\"exact\", \"props\"], [\"exact\", \"slotProps\"], [\"exact\", \"node\"], [\"exact\", \"data\"]],[[\"exact\", \"store\"], [\"exact\", \"input_text_value\"], [\"exact\", \"input\"]]], ...event }); }",
+        "dropdown_value-change": "(event) => { window.uni.switch({ apiUrl:'/ub/render', uniKeys: [[[\"exact\", \"service\"], [\"exact\", \"ubBasic\"]],[[\"exact\", \"service\"], [\"exact\", \"ubDynamic\"]],[[\"exact\", \"props\"], [\"exact\", \"componentKey\"]],[[\"exact\", \"components\"], [\"exact\", \"dropdown_value\"], [\"exact\", \"methods\"], [\"exact\", \"change\"]],[[\"exact\", \"event\"], [\"exact\", \"value\"]]], ...event }); }",
+        "textarea_value-blur": "(event) => { window.uni.switch({ apiUrl:'/ub/render', threads: {\"max\": 1, \"action\": \"queue\"}, uniKeys: [[[\"exact\", \"service\"], [\"exact\", \"ubBasic\"]],[[\"exact\", \"service\"], [\"exact\", \"ubDynamic\"]],[[\"exact\", \"props\"], [\"exact\", \"componentKey\"]],[[\"exact\", \"components\"], [\"exact\", \"textarea_value\"], [\"exact\", \"methods\"], [\"exact\", \"blur\"]],[[\"exact\", \"event\"], [\"exact\", \"type\"]], [[\"exact\", \"event\"], [\"exact\", \"target\"], [\"exact\", \"value\"]]], ...event }); }",
+        "ur_apply_button-click": "(event) => { window.uni.switch({ apiUrl:'/ub/render', threads: {\"max\": 1, \"action\": \"queue\"}, uniKeys: [[[\"exact\", \"service\"], [\"exact\", \"ubBasic\"]],[[\"exact\", \"service\"], [\"exact\", \"ubDynamic\"]],[[\"exact\", \"props\"], [\"exact\", \"componentKey\"]],[[\"exact\", \"components\"], [\"exact\", \"ur_apply_button\"], [\"exact\", \"methods\"], [\"exact\", \"click\"]],[[\"exact\", \"props\"], [\"exact\", \"slotProps\"], [\"exact\", \"node\"], [\"exact\", \"data\"]],[[\"exact\", \"store\"], [\"exact\", \"ur_config_json\"], [\"exact\", \"input\"]], [[\"exact\", \"props\"], [\"exact\", \"slotProps\"], [\"exact\", \"node\"], [\"exact\", \"data\"]]], ...event }); }"
+    },
+    "requestId": 317631766,
+    "service": {
+        "ubBasic": {
+            "ubCRC": "4d3485db4391402cf7080cf87011ff97",
+            "ubData": {
+                "caseSet": null,
+                "roleId": 1,
+                "timeZone": "GMT",
+                "userId": 101,
+                "utc": "1750341103.526805",
+                "viewId": 127
+            }
+        },
+        "ubCache": {
+            "v127": {
+                "cId": [
+                    "default_js"
+                ],
+                "la": 1750341104
+            }
+        }
+    },
+    "store": {
+        "button_main": {},
+        "datatable_main": {
+            "data": [
+                {
+                    "address": "Novi Sad",
+                    "name": "Milosh"
+                },
+                {
+                    "address": "New York",
+                    "name": "James"
+                }
+            ],
+            "filter": {}
+        },
+        "datatable_main_column_address": {
+            "input": ""
+        },
+        "datatable_main_column_name": {
+            "input": ""
+        },
+        "dropdown_container": {},
+        "dropdown_label": {
+            "input": "Select a city"
+        },
+        "dropdown_value": {
+            "data": [
+                {
+                    "id": 1,
+                    "label": "New York"
+                },
+                {
+                    "id": 2,
+                    "label": "Novi Sad"
+                }
+            ],
+            "selected": 1
+        },
+        "input_text_container": {},
+        "input_text_label": {
+            "input": "Your name"
+        },
+        "input_text_value": {
+            "input": ""
+        },
+        "result_container": {},
+        "result_display_container": {},
+        "textarea_container": {},
+        "textarea_label": {
+            "input": "Enter brief description"
+        },
+        "textarea_value": {
+            "input": ""
+        },
+        "ub_config_container": {},
+        "ub_main_container": {},
+        "ur_apply_button": {},
+        "ur_config_buttons_cnt": {},
+        "ur_config_json": {
+            "input": "{\n    \"store\": {\n        \"button_main\": {\n        },\n        \"datatable_main\": {\n            \"data\": [\n                {\n                    \"name\": \"Milosh\",\n                    \"address\": \"Novi Sad\"\n                },\n                {\n                    \"name\": \"James\",\n                    \"address\": \"New York\"\n                }\n            ],\n            \"filter\": {\n            }\n        },\n        \"dropdown_label\": {\n            \"input\": \"Select a city\"\n        },\n        \"dropdown_value\": {\n            \"data\": [\n                {\n                    \"id\": 1,\n                    \"label\": \"New York\"\n                },\n                {\n                    \"id\": 2,\n                    \"label\": \"Novi Sad\"\n                }\n            ],\n            \"selected\": 1\n        },\n        \"textarea_label\": {\n            \"input\": \"Enter brief description\"\n        },\n        \"textarea_value\": {\n            \"input\": \"\"\n        },\n        \"input_text_label\": {\n            \"input\": \"Your name\"\n        },\n        \"input_text_value\": {\n            \"input\": \"\"\n        },\n        \"result_container\": {\n        },\n        \"dropdown_container\": {\n        },\n        \"textarea_container\": {\n        },\n        \"input_text_container\": {\n        },\n        \"result_display_container\": {\n        },\n        \"datatable_main_column_name\": {\n            \"input\": \"\"\n        },\n        \"datatable_main_column_address\": {\n            \"input\": \"\"\n        }\n    },\n    \"methods\": {\n        \"button_main-click\": \"(event) => { window.uni.switch({ apiUrl:'/ub/render', uniKeys: [[[\\\"exact\\\", \\\"service\\\"], [\\\"exact\\\", \\\"ubBasic\\\"]],[[\\\"exact\\\", \\\"service\\\"], [\\\"exact\\\", \\\"ubDynamic\\\"]],[[\\\"exact\\\", \\\"props\\\"], [\\\"exact\\\", \\\"componentKey\\\"]],[[\\\"exact\\\", \\\"components\\\"], [\\\"exact\\\", \\\"button_main\\\"], [\\\"exact\\\", \\\"methods\\\"], [\\\"exact\\\", \\\"click\\\"]],[[\\\"exact\\\", \\\"props\\\"], [\\\"exact\\\", \\\"slotProps\\\"], [\\\"exact\\\", \\\"node\\\"], [\\\"exact\\\", \\\"data\\\"]],[[\\\"exact\\\", \\\"store\\\"], [\\\"exact\\\", \\\"input_text_value\\\"], [\\\"exact\\\", \\\"input\\\"]]], ...event }); }\",\n        \"textarea_value-blur\": \"(event) => { window.uni.switch({ apiUrl:'/ub/render', threads: {\\\"max\\\": 1, \\\"action\\\": \\\"queue\\\"}, uniKeys: [[[\\\"exact\\\", \\\"service\\\"], [\\\"exact\\\", \\\"ubBasic\\\"]],[[\\\"exact\\\", \\\"service\\\"], [\\\"exact\\\", \\\"ubDynamic\\\"]],[[\\\"exact\\\", \\\"props\\\"], [\\\"exact\\\", \\\"componentKey\\\"]],[[\\\"exact\\\", \\\"components\\\"], [\\\"exact\\\", \\\"textarea_value\\\"], [\\\"exact\\\", \\\"methods\\\"], [\\\"exact\\\", \\\"blur\\\"]],[[\\\"exact\\\", \\\"event\\\"], [\\\"exact\\\", \\\"type\\\"]], [[\\\"exact\\\", \\\"event\\\"], [\\\"exact\\\", \\\"target\\\"], [\\\"exact\\\", \\\"value\\\"]]], ...event }); }\",\n        \"dropdown_value-change\": \"(event) => { window.uni.switch({ apiUrl:'/ub/render', uniKeys: [[[\\\"exact\\\", \\\"service\\\"], [\\\"exact\\\", \\\"ubBasic\\\"]],[[\\\"exact\\\", \\\"service\\\"], [\\\"exact\\\", \\\"ubDynamic\\\"]],[[\\\"exact\\\", \\\"props\\\"], [\\\"exact\\\", \\\"componentKey\\\"]],[[\\\"exact\\\", \\\"components\\\"], [\\\"exact\\\", \\\"dropdown_value\\\"], [\\\"exact\\\", \\\"methods\\\"], [\\\"exact\\\", \\\"change\\\"]],[[\\\"exact\\\", \\\"event\\\"], [\\\"exact\\\", \\\"value\\\"]]], ...event }); }\"\n    },\n    \"components\": {\n        \"button_main\": {\n            \"css\": [\n            ],\n            \"key\": \"button_main\",\n            \"url\": \"https://components.unibackend.com/dev/Button/Button-v0.umd.min.js\",\n            \"store\": \"button_main\",\n            \"methods\": {\n                \"click\": \"button_main-click\"\n            },\n            \"options\": {\n                \"useComponent\": true\n            },\n            \"attributes\": {\n                \"label\": \"My button\",\n                \"style\": {\n                    \"margin-left\": \"200px\"\n                },\n                \"hidden\": false,\n                \"iconPos\": \"left\"\n            },\n            \"components\": [\n            ]\n        },\n        \"datatable_main\": {\n            \"css\": [\n            ],\n            \"key\": \"datatable_main\",\n            \"url\": \"https://components.unibackend.com/dev/DataTable/DataTable-v0.umd.min.js\",\n            \"store\": \"datatable_main\",\n            \"methods\": {\n            },\n            \"options\": {\n                \"contextMenu\": {\n                    \"dynamic\": false,\n                    \"enabled\": false\n                },\n                \"useComponent\": true\n            },\n            \"attributes\": {\n                \"lazy\": true,\n                \"hidden\": false,\n                \"rowHover\": false,\n                \"stripedRows\": false,\n                \"stateStorage\": \"session\",\n                \"filterDisplay\": \"menu\",\n                \"removableSort\": true,\n                \"showGridlines\": false,\n                \"columnResizeMode\": \"fit\",\n                \"resizableColumns\": false,\n                \"reorderableColumns\": false\n            },\n            \"components\": [\n                {\n                    \"key\": \"datatable_main_column_name\",\n                    \"options\": {\n                        \"filter\": {\n                            \"type\": \"input\",\n                            \"params\": {\n                            }\n                        },\n                        \"useComponent\": false\n                    },\n                    \"attributes\": {\n                        \"field\": \"name\",\n                        \"header\": \"Name\",\n                        \"sortable\": true,\n                        \"showFilterMenu\": true,\n                        \"showClearButton\": false,\n                        \"showFilterOperator\": false,\n                        \"showFilterMatchModes\": false\n                    }\n                },\n                {\n                    \"key\": \"datatable_main_column_address\",\n                    \"options\": {\n                        \"filter\": {\n                            \"params\": {\n                            }\n                        },\n                        \"useComponent\": false\n                    },\n                    \"attributes\": {\n                        \"field\": \"address\",\n                        \"header\": \"User's address\",\n                        \"sortable\": true,\n                        \"showFilterMenu\": true,\n                        \"showClearButton\": false,\n                        \"showFilterOperator\": false,\n                        \"showFilterMatchModes\": false\n                    }\n                }\n            ],\n            \"customizable\": false\n        },\n        \"dropdown_label\": {\n            \"css\": [\n            ],\n            \"key\": \"dropdown_label\",\n            \"url\": \"https://components.unibackend.com/dev/Span/Span-v0.umd.min.js\",\n            \"store\": \"dropdown_label\",\n            \"methods\": {\n            },\n            \"options\": {\n                \"useComponent\": false\n            },\n            \"attributes\": {\n                \"style\": {\n                    \"color\": \"grey\",\n                    \"font-size\": \"14px\"\n                }\n            },\n            \"components\": [\n            ]\n        },\n        \"dropdown_value\": {\n            \"css\": [\n            ],\n            \"key\": \"dropdown_value\",\n            \"url\": \"https://components.unibackend.com/dev/Dropdown/Dropdown-v0.umd.min.js\",\n            \"store\": \"dropdown_value\",\n            \"methods\": {\n                \"change\": \"dropdown_value-change\"\n            },\n            \"options\": {\n                \"readonly\": false,\n                \"useComponent\": true\n            },\n            \"attributes\": {\n                \"style\": {\n                },\n                \"disabled\": false,\n                \"showClear\": true,\n                \"optionLabel\": \"label\",\n                \"optionValue\": \"id\",\n                \"placeholder\": \"select a city\"\n            },\n            \"components\": [\n            ]\n        },\n        \"textarea_label\": {\n            \"css\": [\n            ],\n            \"key\": \"textarea_label\",\n            \"url\": \"https://components.unibackend.com/dev/Span/Span-v0.umd.min.js\",\n            \"store\": \"textarea_label\",\n            \"methods\": {\n            },\n            \"options\": {\n                \"useComponent\": false\n            },\n            \"attributes\": {\n                \"style\": {\n                    \"color\": \"grey\",\n                    \"font-size\": \"14px\"\n                }\n            },\n            \"components\": [\n            ]\n        },\n        \"textarea_value\": {\n            \"css\": [\n            ],\n            \"key\": \"textarea_value\",\n            \"url\": \"https://components.unibackend.com/dev/Textarea/Textarea-v0.umd.min.js\",\n            \"store\": \"textarea_value\",\n            \"methods\": {\n                \"blur\": \"textarea_value-blur\"\n            },\n            \"options\": {\n                \"tooltip\": {\n                    \"value\": \"\",\n                    \"position\": \"left\",\n                    \"showDelay\": 500\n                },\n                \"validation\": {\n                    \"status\": false\n                },\n                \"useComponent\": true\n            },\n            \"attributes\": {\n                \"cols\": 30,\n                \"rows\": 4,\n                \"class\": [\n                ],\n                \"style\": {\n                },\n                \"disabled\": false,\n                \"autoResize\": false,\n                \"placeholder\": \"Input text\"\n            },\n            \"components\": [\n            ]\n        },\n        \"input_text_label\": {\n            \"css\": [\n            ],\n            \"key\": \"input_text_label\",\n            \"url\": \"https://components.unibackend.com/dev/Span/Span-v0.umd.min.js\",\n            \"store\": \"input_text_label\",\n            \"methods\": {\n            },\n            \"options\": {\n                \"useComponent\": false\n            },\n            \"attributes\": {\n                \"style\": {\n                    \"color\": \"grey\",\n                    \"font-size\": \"14px\"\n                }\n            },\n            \"components\": [\n            ]\n        },\n        \"input_text_value\": {\n            \"css\": [\n            ],\n            \"key\": \"input_text_value\",\n            \"url\": \"https://components.unibackend.com/dev/InputText/InputText-v0.umd.min.js\",\n            \"store\": \"input_text_value\",\n            \"methods\": {\n            },\n            \"options\": {\n                \"readonly\": false,\n                \"useComponent\": true\n            },\n            \"attributes\": {\n                \"style\": {\n                },\n                \"disabled\": false,\n                \"autofocus\": false,\n                \"placeholder\": \"input your name\"\n            },\n            \"components\": [\n            ]\n        },\n        \"result_container\": {\n            \"css\": [\n            ],\n            \"key\": \"result_container\",\n            \"url\": \"https://components.unibackend.com/dev/Container/Container-v0.umd.min.js\",\n            \"store\": \"result_container\",\n            \"methods\": {\n            },\n            \"options\": {\n                \"useComponent\": true\n            },\n            \"attributes\": {\n                \"style\": {\n                    \"display\": \"flex\",\n                    \"margin-left\": \"32px\",\n                    \"flex-direction\": \"column\"\n                }\n            },\n            \"components\": [\n                {\n                    \"key\": \"result_display_container\"\n                }\n            ],\n            \"customizable\": false\n        },\n        \"dropdown_container\": {\n            \"css\": [\n            ],\n            \"key\": \"dropdown_container\",\n            \"url\": \"https://components.unibackend.com/dev/Container/Container-v0.umd.min.js\",\n            \"store\": \"dropdown_container\",\n            \"methods\": {\n            },\n            \"options\": {\n                \"useComponent\": true\n            },\n            \"attributes\": {\n                \"style\": {\n                    \"gap\": \".3rem\",\n                    \"display\": \"flex\",\n                    \"margin-bottom\": \".5rem\",\n                    \"flex-direction\": \"column\"\n                },\n                \"hidden\": false\n            },\n            \"components\": [\n                {\n                    \"key\": \"dropdown_label\"\n                },\n                {\n                    \"key\": \"dropdown_value\"\n                }\n            ],\n            \"customizable\": false\n        },\n        \"textarea_container\": {\n            \"css\": [\n            ],\n            \"key\": \"textarea_container\",\n            \"url\": \"https://components.unibackend.com/dev/Container/Container-v0.umd.min.js\",\n            \"store\": \"textarea_container\",\n            \"methods\": {\n            },\n            \"options\": {\n                \"useComponent\": true\n            },\n            \"attributes\": {\n                \"style\": {\n                    \"gap\": \".3rem\",\n                    \"display\": \"flex\",\n                    \"margin-bottom\": \".5rem\",\n                    \"flex-direction\": \"column\"\n                },\n                \"hidden\": false\n            },\n            \"components\": [\n                {\n                    \"key\": \"textarea_label\"\n                },\n                {\n                    \"key\": \"textarea_value\"\n                }\n            ],\n            \"customizable\": false\n        },\n        \"input_text_container\": {\n            \"css\": [\n            ],\n            \"key\": \"input_text_container\",\n            \"url\": \"https://components.unibackend.com/dev/Container/Container-v0.umd.min.js\",\n            \"store\": \"input_text_container\",\n            \"methods\": {\n            },\n            \"options\": {\n                \"useComponent\": true\n            },\n            \"attributes\": {\n                \"style\": {\n                    \"gap\": \".3rem\",\n                    \"display\": \"flex\",\n                    \"margin-bottom\": \".5rem\",\n                    \"flex-direction\": \"column\"\n                },\n                \"hidden\": false\n            },\n            \"components\": [\n                {\n                    \"key\": \"input_text_label\"\n                },\n                {\n                    \"key\": \"input_text_value\"\n                }\n            ],\n            \"customizable\": false\n        },\n        \"result_display_container\": {\n            \"css\": [\n            ],\n            \"key\": \"result_display_container\",\n            \"url\": \"https://components.unibackend.com/dev/Container/Container-v0.umd.min.js\",\n            \"store\": \"result_display_container\",\n            \"methods\": {\n            },\n            \"options\": {\n                \"useComponent\": true\n            },\n            \"attributes\": {\n                \"style\": {\n                    \"display\": \"flex\",\n                    \"flex-direction\": \"column\"\n                }\n            },\n            \"components\": [\n                {\n                    \"key\": \"datatable_main\"\n                },\n                {\n                    \"key\": \"textarea_container\"\n                },\n                {\n                    \"key\": \"dropdown_container\"\n                },\n                {\n                    \"key\": \"input_text_container\"\n                },\n                {\n                    \"key\": \"button_main\"\n                }\n            ],\n            \"customizable\": false\n        },\n        \"datatable_main_column_name\": {\n            \"css\": [\n            ],\n            \"key\": \"datatable_main_column_name\",\n            \"url\": \"https://components.unibackend.com/dev/Span/Span-v0.umd.min.js\",\n            \"store\": \"datatable_main_column_name\",\n            \"methods\": {\n            },\n            \"options\": {\n                \"filter\": {\n                    \"type\": \"input\"\n                },\n                \"useComponent\": false\n            },\n            \"attributes\": {\n                \"field\": \"name\",\n                \"header\": \"Name\"\n            },\n            \"components\": [\n            ]\n        },\n        \"datatable_main_column_address\": {\n            \"css\": [\n            ],\n            \"key\": \"datatable_main_column_address\",\n            \"url\": \"https://components.unibackend.com/dev/Span/Span-v0.umd.min.js\",\n            \"store\": \"datatable_main_column_address\",\n            \"methods\": {\n            },\n            \"options\": {\n                \"useComponent\": false\n            },\n            \"attributes\": {\n                \"field\": \"address\",\n                \"header\": \"User's address\"\n            },\n            \"components\": [\n            ]\n        }\n    }\n}"
+        }
+    },
+    "url": {
+        "host": "dev.unibackend.com",
+        "path": "/config",
+        "protocol": "https:"
+    }
+}

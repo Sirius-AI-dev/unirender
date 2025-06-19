@@ -1,0 +1,1704 @@
+{
+    "actions": [],
+    "components": {
+        "action_add_elements": {
+            "attributes": {
+                "class": [
+                    "p-button-secondary"
+                ],
+                "iconPos": "left",
+                "label": "Add new elements in modal",
+                "style": {}
+            },
+            "components": [],
+            "css": [],
+            "key": "action_add_elements",
+            "methods": {
+                "click": "action_add_elements-click"
+            },
+            "options": {
+                "useComponent": true
+            },
+            "store": "action_add_elements",
+            "url": "https://components.unibackend.com/dev/Button/Button-v0.umd.min.js"
+        },
+        "action_attribute_change": {
+            "attributes": {
+                "class": [
+                    "p-button-success"
+                ],
+                "iconPos": "left",
+                "label": "Attribute change",
+                "style": {}
+            },
+            "components": [],
+            "css": [],
+            "key": "action_attribute_change",
+            "methods": {
+                "click": "action_attribute_change-click"
+            },
+            "options": {
+                "useComponent": true
+            },
+            "store": "action_attribute_change",
+            "url": "https://components.unibackend.com/dev/Button/Button-v0.umd.min.js"
+        },
+        "action_cnt": {
+            "attributes": {
+                "style": {
+                    "display": "flex",
+                    "flex-direction": "column",
+                    "gap": ".5rem"
+                }
+            },
+            "components": [
+                {
+                    "key": "action_label"
+                },
+                {
+                    "key": "btn_box"
+                }
+            ],
+            "css": [],
+            "customizable": false,
+            "key": "action_cnt",
+            "methods": {},
+            "options": {
+                "useComponent": true
+            },
+            "store": "action_cnt",
+            "url": "https://components.unibackend.com/dev/Container/Container-v0.umd.min.js"
+        },
+        "action_component_change": {
+            "attributes": {
+                "class": [
+                    "p-button-help"
+                ],
+                "iconPos": "left",
+                "label": "Components []",
+                "style": {}
+            },
+            "components": [],
+            "css": [],
+            "key": "action_component_change",
+            "methods": {
+                "click": "action_component_change-click"
+            },
+            "options": {
+                "useComponent": true
+            },
+            "store": "action_component_change",
+            "url": "https://components.unibackend.com/dev/Button/Button-v0.umd.min.js"
+        },
+        "action_delete": {
+            "attributes": {
+                "class": [
+                    "p-button-danger"
+                ],
+                "iconPos": "left",
+                "label": "Delete",
+                "style": {}
+            },
+            "components": [],
+            "css": [],
+            "key": "action_delete",
+            "methods": {
+                "click": "action_delete-click"
+            },
+            "options": {
+                "useComponent": true
+            },
+            "store": "action_delete",
+            "url": "https://components.unibackend.com/dev/Button/Button-v0.umd.min.js"
+        },
+        "action_label": {
+            "attributes": {
+                "style": {
+                    "fontSize": "18px"
+                }
+            },
+            "components": [],
+            "css": [],
+            "key": "action_label",
+            "methods": {},
+            "options": {
+                "useComponent": false
+            },
+            "store": "action_label",
+            "url": "https://components.unibackend.com/dev/Span/Span-v0.umd.min.js"
+        },
+        "action_update": {
+            "attributes": {
+                "class": [
+                    "p-button-warning"
+                ],
+                "iconPos": "left",
+                "label": "Update",
+                "style": {}
+            },
+            "components": [],
+            "css": [],
+            "key": "action_update",
+            "methods": {
+                "click": "action_update-click"
+            },
+            "options": {
+                "useComponent": true
+            },
+            "store": "action_update",
+            "url": "https://components.unibackend.com/dev/Button/Button-v0.umd.min.js"
+        },
+        "btn_box": {
+            "attributes": {
+                "style": {
+                    "display": "flex",
+                    "gap": "1rem"
+                }
+            },
+            "components": [
+                {
+                    "key": "action_delete"
+                },
+                {
+                    "key": "action_update"
+                },
+                {
+                    "key": "action_attribute_change"
+                },
+                {
+                    "key": "action_component_change"
+                },
+                {
+                    "key": "action_add_elements"
+                }
+            ],
+            "css": [],
+            "customizable": false,
+            "key": "btn_box",
+            "methods": {},
+            "options": {
+                "useComponent": true
+            },
+            "store": "btn_box",
+            "url": "https://components.unibackend.com/dev/Container/Container-v0.umd.min.js"
+        },
+        "element_autocomplete": {
+            "attributes": {
+                "delay": 300,
+                "dropdown": false,
+                "minLength": 1,
+                "multiple": false,
+                "placeholder": "Autocomplete"
+            },
+            "components": [],
+            "css": [],
+            "key": "element_autocomplete",
+            "methods": {},
+            "options": {
+                "backendMode": false,
+                "searchMethod": "startsWith",
+                "useComponent": true
+            },
+            "store": "element_autocomplete",
+            "url": "https://components.unibackend.com/dev/Autocomplete/Autocomplete-v0.umd.min.js"
+        },
+        "element_button": {
+            "attributes": {
+                "iconPos": "left",
+                "label": "Open modal",
+                "style": {}
+            },
+            "components": [],
+            "css": [],
+            "key": "element_button",
+            "methods": {
+                "click": "element_button-click"
+            },
+            "options": {
+                "useComponent": true
+            },
+            "store": "element_button",
+            "url": "https://components.unibackend.com/dev/Button/Button-v0.umd.min.js"
+        },
+        "element_checkbox": {
+            "attributes": {
+                "binary": true,
+                "disabled": false,
+                "required": false
+            },
+            "components": [],
+            "css": [],
+            "key": "element_checkbox",
+            "methods": {},
+            "options": {
+                "useComponent": true
+            },
+            "store": "element_checkbox",
+            "url": "https://components.unibackend.com/dev/Checkbox/Checkbox-v0.umd.min.js"
+        },
+        "element_checkbox_cnt": {
+            "attributes": {
+                "style": {
+                    "align-items": "center",
+                    "display": "flex",
+                    "gap": ".5rem"
+                }
+            },
+            "components": [
+                {
+                    "key": "element_checkbox"
+                },
+                {
+                    "key": "element_checkbox_label"
+                }
+            ],
+            "css": [],
+            "customizable": false,
+            "key": "element_checkbox_cnt",
+            "methods": {},
+            "options": {
+                "useComponent": true
+            },
+            "store": "element_checkbox_cnt",
+            "url": "https://components.unibackend.com/dev/Container/Container-v0.umd.min.js"
+        },
+        "element_checkbox_label": {
+            "components": [],
+            "css": [],
+            "key": "element_checkbox_label",
+            "methods": {},
+            "options": {
+                "useComponent": false
+            },
+            "store": "element_checkbox_label",
+            "url": "https://components.unibackend.com/dev/Span/Span-v0.umd.min.js"
+        },
+        "element_dialog": {
+            "attributes": {
+                "baseZIndex": -101,
+                "closable": true,
+                "closeOnEscape": true,
+                "dismissableMask": true,
+                "draggable": true,
+                "header": "The Modal",
+                "modal": true,
+                "style": {
+                    "width": "50rem"
+                },
+                "visible": false
+            },
+            "components": [
+                {
+                    "key": "element_dialog_body"
+                }
+            ],
+            "css": [],
+            "key": "element_dialog",
+            "methods": {},
+            "options": {
+                "useComponent": true
+            },
+            "store": "element_dialog",
+            "url": "https://components.unibackend.com/dev/Dialog/Dialog-v0.umd.min.js"
+        },
+        "element_dialog_body": {
+            "components": [
+                {
+                    "key": "element_dialog_body_cnt"
+                },
+                {
+                    "key": "element_dialog_footer"
+                }
+            ],
+            "css": [],
+            "customizable": false,
+            "key": "element_dialog_body",
+            "methods": {},
+            "options": {
+                "useComponent": true
+            },
+            "store": "element_dialog_body",
+            "url": "https://components.unibackend.com/dev/Container/Container-v0.umd.min.js"
+        },
+        "element_dialog_body_cnt": {
+            "components": [
+                {
+                    "key": "element_dialog_body_text_2"
+                },
+                {
+                    "key": "element_dialog_body_text_1"
+                }
+            ],
+            "css": [],
+            "customizable": false,
+            "key": "element_dialog_body_cnt",
+            "methods": {},
+            "options": {
+                "useComponent": true
+            },
+            "store": "element_dialog_body_cnt",
+            "url": "https://components.unibackend.com/dev/Container/Container-v0.umd.min.js"
+        },
+        "element_dialog_body_text_1": {
+            "components": [],
+            "css": [],
+            "key": "element_dialog_body_text_1",
+            "methods": {},
+            "options": {
+                "rawHTML": true,
+                "useComponent": false
+            },
+            "store": "element_dialog_body_text_1",
+            "url": "https://components.unibackend.com/dev/Span/Span-v0.umd.min.js"
+        },
+        "element_dialog_body_text_2": {
+            "components": [],
+            "css": [],
+            "key": "element_dialog_body_text_2",
+            "methods": {},
+            "options": {
+                "rawHTML": true,
+                "useComponent": false
+            },
+            "store": "element_dialog_body_text_2",
+            "url": "https://components.unibackend.com/dev/Span/Span-v0.umd.min.js"
+        },
+        "element_dialog_footer": {
+            "components": [
+                {
+                    "key": "element_dialog_footer_cnt"
+                }
+            ],
+            "css": [],
+            "customizable": false,
+            "key": "element_dialog_footer",
+            "methods": {},
+            "options": {
+                "slot": "footer",
+                "useComponent": true
+            },
+            "store": "element_dialog_footer",
+            "url": "https://components.unibackend.com/dev/Container/Container-v0.umd.min.js"
+        },
+        "element_dialog_footer_button_2": {
+            "attributes": {
+                "iconPos": "left",
+                "label": "OK",
+                "style": {}
+            },
+            "components": [],
+            "css": [],
+            "key": "element_dialog_footer_button_2",
+            "methods": {},
+            "options": {
+                "useComponent": true
+            },
+            "store": "element_dialog_footer_button_2",
+            "url": "https://components.unibackend.com/dev/Button/Button-v0.umd.min.js"
+        },
+        "element_dialog_footer_cnt": {
+            "components": [
+                {
+                    "key": "element_dialog_footer_button_2"
+                }
+            ],
+            "css": [],
+            "customizable": false,
+            "key": "element_dialog_footer_cnt",
+            "methods": {},
+            "options": {
+                "useComponent": true
+            },
+            "store": "element_dialog_footer_cnt",
+            "url": "https://components.unibackend.com/dev/Container/Container-v0.umd.min.js"
+        },
+        "element_dropdown": {
+            "attributes": {
+                "disabled": false,
+                "placeholder": "pick one",
+                "showClear": true,
+                "style": {}
+            },
+            "components": [],
+            "css": [],
+            "key": "element_dropdown",
+            "methods": {},
+            "options": {
+                "readonly": false,
+                "useComponent": true
+            },
+            "store": "element_dropdown",
+            "url": "https://components.unibackend.com/dev/Dropdown/Dropdown-v0.umd.min.js"
+        },
+        "element_input_text": {
+            "attributes": {
+                "autofocus": false,
+                "disabled": false,
+                "placeholder": "search",
+                "style": {}
+            },
+            "components": [],
+            "css": [],
+            "key": "element_input_text",
+            "methods": {},
+            "options": {
+                "readonly": false,
+                "useComponent": true
+            },
+            "store": "element_input_text",
+            "url": "https://components.unibackend.com/dev/InputText/InputText-v0.umd.min.js"
+        },
+        "element_label": {
+            "attributes": {
+                "style": {
+                    "fontSize": "18px"
+                }
+            },
+            "components": [],
+            "css": [],
+            "key": "element_label",
+            "methods": {},
+            "options": {
+                "useComponent": false
+            },
+            "store": "element_label",
+            "url": "https://components.unibackend.com/dev/Span/Span-v0.umd.min.js"
+        },
+        "element_switch_container": {
+            "attributes": {
+                "style": {
+                    "align-items": "center",
+                    "display": "flex",
+                    "gap": ".5rem"
+                }
+            },
+            "components": [
+                {
+                    "key": "ub_input_switch1"
+                },
+                {
+                    "key": "ub_switch_label"
+                }
+            ],
+            "css": [],
+            "customizable": false,
+            "key": "element_switch_container",
+            "methods": {},
+            "options": {
+                "useComponent": true
+            },
+            "store": "element_switch_container",
+            "url": "https://components.unibackend.com/dev/Container/Container-v0.umd.min.js"
+        },
+        "form_components": {
+            "attributes": {
+                "style": {
+                    "display": "flex",
+                    "flex-direction": "column",
+                    "gap": ".5rem",
+                    "width": "300px"
+                }
+            },
+            "components": [
+                {
+                    "key": "element_label"
+                },
+                {
+                    "key": "element_autocomplete"
+                },
+                {
+                    "key": "element_button"
+                },
+                {
+                    "key": "element_checkbox_cnt"
+                },
+                {
+                    "key": "element_dropdown"
+                },
+                {
+                    "key": "element_input_text"
+                },
+                {
+                    "key": "element_switch_container"
+                },
+                {
+                    "key": "element_dialog"
+                }
+            ],
+            "css": [],
+            "customizable": false,
+            "key": "form_components",
+            "methods": {},
+            "options": {
+                "useComponent": true
+            },
+            "store": "form_components",
+            "url": "https://components.unibackend.com/dev/Container/Container-v0.umd.min.js"
+        },
+        "splitter_left_cnt": {
+            "components": [
+                {
+                    "key": "splitter_left_datatable"
+                }
+            ],
+            "css": [],
+            "customizable": false,
+            "key": "splitter_left_cnt",
+            "methods": {},
+            "options": {
+                "useComponent": true
+            },
+            "store": "splitter_left_cnt",
+            "url": "https://components.unibackend.com/dev/Container/Container-v0.umd.min.js"
+        },
+        "splitter_left_datatable": {
+            "attributes": {
+                "columnResizeMode": "fit",
+                "dataKey": "id",
+                "filterDisplay": "menu",
+                "lazy": true,
+                "removableSort": true,
+                "reorderableColumns": false,
+                "resizableColumns": false,
+                "rowHover": false,
+                "showGridlines": false,
+                "stateStorage": "session",
+                "stripedRows": false
+            },
+            "components": [
+                {
+                    "attributes": {
+                        "field": "name",
+                        "header": "Name",
+                        "showClearButton": false,
+                        "showFilterMatchModes": false,
+                        "showFilterMenu": true,
+                        "showFilterOperator": false,
+                        "sortable": false
+                    },
+                    "key": "splitter_left_name",
+                    "options": {
+                        "filter": {
+                            "params": {}
+                        },
+                        "useComponent": false
+                    }
+                },
+                {
+                    "attributes": {
+                        "field": "description",
+                        "header": "Description",
+                        "showClearButton": false,
+                        "showFilterMatchModes": false,
+                        "showFilterMenu": true,
+                        "showFilterOperator": false,
+                        "sortable": false
+                    },
+                    "key": "splitter_left_description",
+                    "options": {
+                        "filter": {
+                            "params": {}
+                        },
+                        "useComponent": false
+                    }
+                },
+                {
+                    "attributes": {
+                        "field": "price",
+                        "header": "Price",
+                        "showClearButton": false,
+                        "showFilterMatchModes": false,
+                        "showFilterMenu": true,
+                        "showFilterOperator": false,
+                        "sortable": false
+                    },
+                    "key": "splitter_left_price",
+                    "options": {
+                        "filter": {
+                            "params": {}
+                        },
+                        "useComponent": false
+                    }
+                },
+                {
+                    "attributes": {
+                        "field": "quantity",
+                        "header": "Quantity",
+                        "showClearButton": false,
+                        "showFilterMatchModes": false,
+                        "showFilterMenu": true,
+                        "showFilterOperator": false,
+                        "sortable": false
+                    },
+                    "key": "splitter_left_quantity",
+                    "options": {
+                        "filter": {
+                            "params": {}
+                        },
+                        "useComponent": false
+                    }
+                }
+            ],
+            "css": [],
+            "customizable": false,
+            "key": "splitter_left_datatable",
+            "methods": {},
+            "options": {
+                "contextMenu": {
+                    "dynamic": false,
+                    "enabled": false
+                },
+                "useComponent": true
+            },
+            "store": "splitter_left_datatable",
+            "url": "https://components.unibackend.com/dev/DataTable/DataTable-v0.umd.min.js"
+        },
+        "splitter_left_description": {
+            "attributes": {
+                "field": "description",
+                "header": "Description",
+                "sortable": false
+            },
+            "components": [],
+            "css": [],
+            "key": "splitter_left_description",
+            "methods": {},
+            "options": {
+                "useComponent": false
+            },
+            "store": "splitter_left_description",
+            "url": "https://components.unibackend.com/dev/Span/Span-v0.umd.min.js"
+        },
+        "splitter_left_name": {
+            "attributes": {
+                "field": "name",
+                "header": "Name",
+                "sortable": false
+            },
+            "components": [],
+            "css": [],
+            "key": "splitter_left_name",
+            "methods": {},
+            "options": {
+                "useComponent": false
+            },
+            "store": "splitter_left_name",
+            "url": "https://components.unibackend.com/dev/Span/Span-v0.umd.min.js"
+        },
+        "splitter_left_price": {
+            "attributes": {
+                "field": "price",
+                "header": "Price",
+                "sortable": false
+            },
+            "components": [],
+            "css": [],
+            "key": "splitter_left_price",
+            "methods": {},
+            "options": {
+                "useComponent": false
+            },
+            "store": "splitter_left_price",
+            "url": "https://components.unibackend.com/dev/Span/Span-v0.umd.min.js"
+        },
+        "splitter_left_quantity": {
+            "attributes": {
+                "field": "quantity",
+                "header": "Quantity",
+                "sortable": false
+            },
+            "components": [],
+            "css": [],
+            "key": "splitter_left_quantity",
+            "methods": {},
+            "options": {
+                "useComponent": false
+            },
+            "store": "splitter_left_quantity",
+            "url": "https://components.unibackend.com/dev/Span/Span-v0.umd.min.js"
+        },
+        "splitter_main": {
+            "attributes": {
+                "class": [],
+                "gutterSize": 4,
+                "layout": "horizontal",
+                "stateKey": "",
+                "stateStorage": "session",
+                "step": 5,
+                "style": {}
+            },
+            "components": [
+                {
+                    "attributes": {},
+                    "key": "splitter_left_cnt"
+                },
+                {
+                    "attributes": {},
+                    "key": "splitter_right_cnt"
+                }
+            ],
+            "css": [],
+            "key": "splitter_main",
+            "methods": {},
+            "options": {
+                "useComponent": true
+            },
+            "store": "splitter_main",
+            "url": "https://components.unibackend.com/dev/Splitter/Splitter-v0.umd.min.js"
+        },
+        "splitter_right_cnt": {
+            "components": [
+                {
+                    "key": "splitter_right_tabview"
+                }
+            ],
+            "css": [],
+            "customizable": false,
+            "key": "splitter_right_cnt",
+            "methods": {},
+            "options": {
+                "useComponent": true
+            },
+            "store": "splitter_right_cnt",
+            "url": "https://components.unibackend.com/dev/Container/Container-v0.umd.min.js"
+        },
+        "splitter_right_datatable": {
+            "attributes": {
+                "columnResizeMode": "fit",
+                "dataKey": "id",
+                "filterDisplay": "menu",
+                "lazy": true,
+                "removableSort": true,
+                "reorderableColumns": false,
+                "resizableColumns": false,
+                "rowHover": false,
+                "showGridlines": false,
+                "stateStorage": "session",
+                "stripedRows": false
+            },
+            "components": [
+                {
+                    "attributes": {
+                        "field": "name",
+                        "header": "Name",
+                        "showClearButton": false,
+                        "showFilterMatchModes": false,
+                        "showFilterMenu": true,
+                        "showFilterOperator": false,
+                        "sortable": false
+                    },
+                    "key": "splitter_right_name",
+                    "options": {
+                        "filter": {
+                            "params": {}
+                        },
+                        "useComponent": false
+                    }
+                },
+                {
+                    "attributes": {
+                        "field": "description",
+                        "header": "Description",
+                        "showClearButton": false,
+                        "showFilterMatchModes": false,
+                        "showFilterMenu": true,
+                        "showFilterOperator": false,
+                        "sortable": false
+                    },
+                    "key": "splitter_right_description",
+                    "options": {
+                        "filter": {
+                            "params": {}
+                        },
+                        "useComponent": false
+                    }
+                },
+                {
+                    "attributes": {
+                        "field": "price",
+                        "header": "Price",
+                        "showClearButton": false,
+                        "showFilterMatchModes": false,
+                        "showFilterMenu": true,
+                        "showFilterOperator": false,
+                        "sortable": false
+                    },
+                    "key": "splitter_right_price",
+                    "options": {
+                        "filter": {
+                            "params": {}
+                        },
+                        "useComponent": false
+                    }
+                },
+                {
+                    "attributes": {
+                        "field": "quantity",
+                        "header": "Quantity",
+                        "showClearButton": false,
+                        "showFilterMatchModes": false,
+                        "showFilterMenu": true,
+                        "showFilterOperator": false,
+                        "sortable": false
+                    },
+                    "key": "splitter_right_quantity",
+                    "options": {
+                        "filter": {
+                            "params": {}
+                        },
+                        "useComponent": false
+                    }
+                }
+            ],
+            "css": [],
+            "customizable": false,
+            "key": "splitter_right_datatable",
+            "methods": {},
+            "options": {
+                "contextMenu": {
+                    "dynamic": false,
+                    "enabled": false
+                },
+                "useComponent": true
+            },
+            "store": "splitter_right_datatable",
+            "url": "https://components.unibackend.com/dev/DataTable/DataTable-v0.umd.min.js"
+        },
+        "splitter_right_description": {
+            "attributes": {
+                "field": "description",
+                "header": "Description",
+                "sortable": false
+            },
+            "components": [],
+            "css": [],
+            "key": "splitter_right_description",
+            "methods": {},
+            "options": {
+                "useComponent": false
+            },
+            "store": "splitter_right_description",
+            "url": "https://components.unibackend.com/dev/Span/Span-v0.umd.min.js"
+        },
+        "splitter_right_name": {
+            "attributes": {
+                "field": "name",
+                "header": "Name",
+                "sortable": false
+            },
+            "components": [],
+            "css": [],
+            "key": "splitter_right_name",
+            "methods": {},
+            "options": {
+                "useComponent": false
+            },
+            "store": "splitter_right_name",
+            "url": "https://components.unibackend.com/dev/Span/Span-v0.umd.min.js"
+        },
+        "splitter_right_price": {
+            "attributes": {
+                "field": "price",
+                "header": "Price",
+                "sortable": false
+            },
+            "components": [],
+            "css": [],
+            "key": "splitter_right_price",
+            "methods": {},
+            "options": {
+                "useComponent": false
+            },
+            "store": "splitter_right_price",
+            "url": "https://components.unibackend.com/dev/Span/Span-v0.umd.min.js"
+        },
+        "splitter_right_quantity": {
+            "attributes": {
+                "field": "quantity",
+                "header": "Quantity",
+                "sortable": false
+            },
+            "components": [],
+            "css": [],
+            "key": "splitter_right_quantity",
+            "methods": {},
+            "options": {
+                "useComponent": false
+            },
+            "store": "splitter_right_quantity",
+            "url": "https://components.unibackend.com/dev/Span/Span-v0.umd.min.js"
+        },
+        "splitter_right_tab_1": {
+            "attributes": {
+                "header": "Tab 1",
+                "tabKey": "first"
+            },
+            "components": [
+                {
+                    "key": "ub_splitter"
+                }
+            ],
+            "css": [],
+            "customizable": false,
+            "key": "splitter_right_tab_1",
+            "methods": {},
+            "options": {
+                "useComponent": true
+            },
+            "store": "splitter_right_tab_1",
+            "url": "https://components.unibackend.com/dev/Container/Container-v0.umd.min.js"
+        },
+        "splitter_right_tab_1_1": {
+            "attributes": {
+                "header": "Tab 1",
+                "tabKey": "first"
+            },
+            "components": [
+                {
+                    "key": "splitter_right_tab_2_span_1_1"
+                }
+            ],
+            "css": [],
+            "customizable": false,
+            "key": "splitter_right_tab_1_1",
+            "methods": {},
+            "options": {
+                "useComponent": true
+            },
+            "store": "splitter_right_tab_1_1",
+            "url": "https://components.unibackend.com/dev/Container/Container-v0.umd.min.js"
+        },
+        "splitter_right_tab_2": {
+            "attributes": {
+                "header": "Tab 2",
+                "tabKey": "second"
+            },
+            "components": [
+                {
+                    "key": "splitter_right_tab_2_span"
+                }
+            ],
+            "css": [],
+            "customizable": false,
+            "key": "splitter_right_tab_2",
+            "methods": {},
+            "options": {
+                "useComponent": true
+            },
+            "store": "splitter_right_tab_2",
+            "url": "https://components.unibackend.com/dev/Container/Container-v0.umd.min.js"
+        },
+        "splitter_right_tab_2_1": {
+            "attributes": {
+                "header": "Tab 2",
+                "tabKey": "second"
+            },
+            "components": [
+                {
+                    "key": "splitter_right_tab_2_span_1"
+                }
+            ],
+            "css": [],
+            "customizable": false,
+            "key": "splitter_right_tab_2_1",
+            "methods": {},
+            "options": {
+                "useComponent": true
+            },
+            "store": "splitter_right_tab_2_1",
+            "url": "https://components.unibackend.com/dev/Container/Container-v0.umd.min.js"
+        },
+        "splitter_right_tab_2_span": {
+            "components": [],
+            "css": [],
+            "key": "splitter_right_tab_2_span",
+            "methods": {},
+            "options": {
+                "rawHTML": true,
+                "useComponent": false
+            },
+            "store": "splitter_right_tab_2_span",
+            "url": "https://components.unibackend.com/dev/Span/Span-v0.umd.min.js"
+        },
+        "splitter_right_tab_2_span_1": {
+            "components": [],
+            "css": [],
+            "key": "splitter_right_tab_2_span_1",
+            "methods": {},
+            "options": {
+                "rawHTML": true,
+                "useComponent": false
+            },
+            "store": "splitter_right_tab_2_span_1",
+            "url": "https://components.unibackend.com/dev/Span/Span-v0.umd.min.js"
+        },
+        "splitter_right_tab_2_span_1_1": {
+            "components": [],
+            "css": [],
+            "key": "splitter_right_tab_2_span_1_1",
+            "methods": {},
+            "options": {
+                "rawHTML": false,
+                "useComponent": false
+            },
+            "store": "splitter_right_tab_2_span_1_1",
+            "url": "https://components.unibackend.com/dev/Span/Span-v0.umd.min.js"
+        },
+        "splitter_right_tab_3": {
+            "attributes": {
+                "header": "Tab 3",
+                "tabKey": "third"
+            },
+            "components": [
+                {
+                    "key": "splitter_right_tab_3_span"
+                }
+            ],
+            "css": [],
+            "customizable": false,
+            "key": "splitter_right_tab_3",
+            "methods": {},
+            "options": {
+                "useComponent": true
+            },
+            "store": "splitter_right_tab_3",
+            "url": "https://components.unibackend.com/dev/Container/Container-v0.umd.min.js"
+        },
+        "splitter_right_tab_3_1": {
+            "attributes": {
+                "header": "Tab 3",
+                "tabKey": "third"
+            },
+            "components": [
+                {
+                    "key": "splitter_right_tab_3_span_1"
+                }
+            ],
+            "css": [],
+            "customizable": false,
+            "key": "splitter_right_tab_3_1",
+            "methods": {},
+            "options": {
+                "useComponent": true
+            },
+            "store": "splitter_right_tab_3_1",
+            "url": "https://components.unibackend.com/dev/Container/Container-v0.umd.min.js"
+        },
+        "splitter_right_tab_3_span": {
+            "components": [],
+            "css": [],
+            "key": "splitter_right_tab_3_span",
+            "methods": {},
+            "options": {
+                "rawHTML": true,
+                "useComponent": false
+            },
+            "store": "splitter_right_tab_3_span",
+            "url": "https://components.unibackend.com/dev/Span/Span-v0.umd.min.js"
+        },
+        "splitter_right_tab_3_span_1": {
+            "components": [],
+            "css": [],
+            "key": "splitter_right_tab_3_span_1",
+            "methods": {},
+            "options": {
+                "rawHTML": true,
+                "useComponent": false
+            },
+            "store": "splitter_right_tab_3_span_1",
+            "url": "https://components.unibackend.com/dev/Span/Span-v0.umd.min.js"
+        },
+        "splitter_right_tabview": {
+            "attributes": {
+                "class": [],
+                "lazy": false,
+                "scrollable": false,
+                "style": {}
+            },
+            "components": [
+                {
+                    "attributes": {
+                        "disabled": false,
+                        "header": "Tab 1",
+                        "tabKey": "first"
+                    },
+                    "key": "splitter_right_tab_1",
+                    "options": {}
+                },
+                {
+                    "attributes": {
+                        "disabled": false,
+                        "header": "Tab 2",
+                        "tabKey": "second"
+                    },
+                    "key": "splitter_right_tab_2",
+                    "options": {}
+                },
+                {
+                    "attributes": {
+                        "disabled": false,
+                        "header": "Tab 3",
+                        "tabKey": "third"
+                    },
+                    "key": "splitter_right_tab_3",
+                    "options": {}
+                }
+            ],
+            "css": [],
+            "key": "splitter_right_tabview",
+            "methods": {},
+            "options": {
+                "useComponent": true
+            },
+            "store": "splitter_right_tabview",
+            "url": "https://components.unibackend.com/dev/TabView/TabView-v0.umd.min.js"
+        },
+        "splitter_right_tabview_1": {
+            "attributes": {
+                "class": [],
+                "lazy": false,
+                "scrollable": false,
+                "style": {}
+            },
+            "components": [
+                {
+                    "attributes": {
+                        "disabled": false,
+                        "header": "Tab 1",
+                        "tabKey": "first"
+                    },
+                    "key": "splitter_right_tab_1_1",
+                    "options": {}
+                },
+                {
+                    "attributes": {
+                        "disabled": false,
+                        "header": "Tab 2",
+                        "tabKey": "second"
+                    },
+                    "key": "splitter_right_tab_2_1",
+                    "options": {}
+                },
+                {
+                    "attributes": {
+                        "disabled": false,
+                        "header": "Tab 3",
+                        "tabKey": "third"
+                    },
+                    "key": "splitter_right_tab_3_1",
+                    "options": {}
+                }
+            ],
+            "css": [],
+            "key": "splitter_right_tabview_1",
+            "methods": {},
+            "options": {
+                "useComponent": true
+            },
+            "store": "splitter_right_tabview_1",
+            "url": "https://components.unibackend.com/dev/TabView/TabView-v0.umd.min.js"
+        },
+        "top_cnt": {
+            "attributes": {
+                "style": {
+                    "display": "flex",
+                    "flex-direction": "column",
+                    "gap": "1rem"
+                }
+            },
+            "components": [
+                {
+                    "key": "action_cnt"
+                },
+                {
+                    "key": "form_components"
+                },
+                {
+                    "key": "splitter_main"
+                },
+                {
+                    "key": "vueFlow_container"
+                }
+            ],
+            "css": [],
+            "customizable": false,
+            "key": "top_cnt",
+            "methods": {},
+            "options": {
+                "useComponent": true
+            },
+            "store": "top_cnt",
+            "url": "https://components.unibackend.com/dev/Container/Container-v0.umd.min.js"
+        },
+        "ub_container": {
+            "components": [
+                {
+                    "key": "splitter_right_datatable"
+                }
+            ],
+            "css": [],
+            "customizable": false,
+            "key": "ub_container",
+            "methods": {},
+            "options": {
+                "useComponent": true
+            },
+            "store": "ub_container",
+            "url": "https://components.unibackend.com/dev/Container/Container-v0.umd.min.js"
+        },
+        "ub_container_1": {
+            "components": [
+                {
+                    "key": "splitter_right_tabview_1"
+                }
+            ],
+            "css": [],
+            "customizable": false,
+            "key": "ub_container_1",
+            "methods": {},
+            "options": {
+                "useComponent": true
+            },
+            "store": "ub_container_1",
+            "url": "https://components.unibackend.com/dev/Container/Container-v0.umd.min.js"
+        },
+        "ub_input_switch1": {
+            "attributes": {
+                "falseValue": "0",
+                "trueValue": "1"
+            },
+            "components": [],
+            "css": [],
+            "key": "ub_input_switch1",
+            "methods": {},
+            "options": {
+                "useComponent": true
+            },
+            "store": "ub_input_switch1",
+            "url": "https://components.unibackend.com/dev/InputSwitch/InputSwitch-v0.umd.min.js"
+        },
+        "ub_splitter": {
+            "attributes": {
+                "class": [],
+                "gutterSize": 4,
+                "layout": "horizontal",
+                "stateKey": "",
+                "stateStorage": "session",
+                "step": 5,
+                "style": {}
+            },
+            "components": [
+                {
+                    "attributes": {},
+                    "key": "ub_container"
+                },
+                {
+                    "attributes": {},
+                    "key": "ub_container_1"
+                }
+            ],
+            "css": [],
+            "key": "ub_splitter",
+            "methods": {},
+            "options": {
+                "useComponent": true
+            },
+            "store": "ub_splitter",
+            "url": "https://components.unibackend.com/dev/Splitter/Splitter-v0.umd.min.js"
+        },
+        "ub_switch_label": {
+            "components": [],
+            "css": [],
+            "key": "ub_switch_label",
+            "methods": {},
+            "options": {
+                "useComponent": false
+            },
+            "store": "ub_switch_label",
+            "url": "https://components.unibackend.com/dev/Span/Span-v0.umd.min.js"
+        },
+        "ub_vueFlow": {
+            "components": [],
+            "css": [],
+            "key": "ub_vueFlow",
+            "methods": {},
+            "options": {
+                "useComponent": true
+            },
+            "store": "ub_vueFlow",
+            "url": "https://components.unibackend.com/dev/VueFlow/VueFlow-v0.umd.min.js"
+        },
+        "vueFlowSidebar": {
+            "components": [],
+            "css": [],
+            "key": "vueFlowSidebar",
+            "methods": {},
+            "options": {
+                "useComponent": true
+            },
+            "store": "vueFlowSidebar",
+            "url": "https://components.unibackend.com/dev/VueFlowSidebar/VueFlowSidebar-v0.umd.min.js"
+        },
+        "vueFlow_container": {
+            "attributes": {
+                "style": {
+                    "display": "flex",
+                    "height": "500px"
+                }
+            },
+            "components": [
+                {
+                    "key": "ub_vueFlow"
+                },
+                {
+                    "key": "vueFlowSidebar"
+                }
+            ],
+            "css": [],
+            "customizable": false,
+            "key": "vueFlow_container",
+            "methods": {},
+            "options": {
+                "useComponent": true
+            },
+            "store": "vueFlow_container",
+            "url": "https://components.unibackend.com/dev/Container/Container-v0.umd.min.js"
+        }
+    },
+    "composition": {
+        "head": [
+            {
+                "attributes": {
+                    "defer": true
+                },
+                "id": "default_js",
+                "src": "https://components.unibackend.com/dev/default.js",
+                "type": "script"
+            }
+        ],
+        "points": {
+            "#app": "top_cnt"
+        },
+        "title": "Demo components",
+        "version": "2.5.1"
+    },
+    "durationMSec": 22.349119186401367,
+    "methods": {
+        "action_add_elements-click": "(event) => { window.uni.switch({ apiUrl:'/ub/render', threads: {\"max\": 1, \"action\": \"queue\"}, uniKeys: [[[\"exact\", \"service\"], [\"exact\", \"ubBasic\"]],[[\"exact\", \"service\"], [\"exact\", \"ubDynamic\"]],[[\"exact\", \"props\"], [\"exact\", \"componentKey\"]],[[\"exact\", \"components\"], [\"exact\", \"action_add_elements\"], [\"exact\", \"methods\"], [\"exact\", \"click\"]],[[\"exact\", \"props\"], [\"exact\", \"slotProps\"], [\"exact\", \"node\"], [\"exact\", \"data\"]]], ...event }); }",
+        "action_attribute_change-click": "(event) => { window.uni.switch({ apiUrl:'/ub/render', threads: {\"max\": 1, \"action\": \"queue\"}, uniKeys: [[[\"exact\", \"service\"], [\"exact\", \"ubBasic\"]],[[\"exact\", \"service\"], [\"exact\", \"ubDynamic\"]],[[\"exact\", \"props\"], [\"exact\", \"componentKey\"]],[[\"exact\", \"components\"], [\"exact\", \"action_attribute_change\"], [\"exact\", \"methods\"], [\"exact\", \"click\"]],[[\"exact\", \"props\"], [\"exact\", \"slotProps\"], [\"exact\", \"node\"], [\"exact\", \"data\"]]], ...event }); }",
+        "action_component_change-click": "(event) => { window.uni.switch({ apiUrl:'/ub/render', threads: {\"max\": 1, \"action\": \"queue\"}, uniKeys: [[[\"exact\", \"service\"], [\"exact\", \"ubBasic\"]],[[\"exact\", \"service\"], [\"exact\", \"ubDynamic\"]],[[\"exact\", \"props\"], [\"exact\", \"componentKey\"]],[[\"exact\", \"components\"], [\"exact\", \"action_component_change\"], [\"exact\", \"methods\"], [\"exact\", \"click\"]],[[\"exact\", \"props\"], [\"exact\", \"slotProps\"], [\"exact\", \"node\"], [\"exact\", \"data\"]]], ...event }); }",
+        "action_delete-click": "(event) => { window.uni.switch({ apiUrl:'/ub/render', threads: {\"max\": 1, \"action\": \"queue\"}, uniKeys: [[[\"exact\", \"service\"], [\"exact\", \"ubBasic\"]],[[\"exact\", \"service\"], [\"exact\", \"ubDynamic\"]],[[\"exact\", \"props\"], [\"exact\", \"componentKey\"]],[[\"exact\", \"components\"], [\"exact\", \"action_delete\"], [\"exact\", \"methods\"], [\"exact\", \"click\"]],[[\"exact\", \"props\"], [\"exact\", \"slotProps\"], [\"exact\", \"node\"], [\"exact\", \"data\"]]], ...event }); }",
+        "action_update-click": "(event) => { window.uni.switch({ apiUrl:'/ub/render', threads: {\"max\": 1, \"action\": \"queue\"}, uniKeys: [[[\"exact\", \"service\"], [\"exact\", \"ubBasic\"]],[[\"exact\", \"service\"], [\"exact\", \"ubDynamic\"]],[[\"exact\", \"props\"], [\"exact\", \"componentKey\"]],[[\"exact\", \"components\"], [\"exact\", \"action_update\"], [\"exact\", \"methods\"], [\"exact\", \"click\"]],[[\"exact\", \"props\"], [\"exact\", \"slotProps\"], [\"exact\", \"node\"], [\"exact\", \"data\"]],[[\"exact\", \"store\"], [\"exact\", \"element_label\"], [\"exact\", \"input\"]]], ...event }); }",
+        "element_button-click": "(event) => { window.uni.switch({ apiUrl:'/ub/render', threads: {\"max\": 1, \"action\": \"queue\"}, uniKeys: [[[\"exact\", \"service\"], [\"exact\", \"ubBasic\"]],[[\"exact\", \"service\"], [\"exact\", \"ubDynamic\"]],[[\"exact\", \"props\"], [\"exact\", \"componentKey\"]],[[\"exact\", \"components\"], [\"exact\", \"element_button\"], [\"exact\", \"methods\"], [\"exact\", \"click\"]],[[\"exact\", \"props\"], [\"exact\", \"slotProps\"], [\"exact\", \"node\"], [\"exact\", \"data\"]]], ...event }); }"
+    },
+    "requestId": 997536378,
+    "service": {
+        "ubBasic": {
+            "ubCRC": "bd073003128a621a47ffdd28c8ae8c8f",
+            "ubData": {
+                "caseSet": null,
+                "roleId": 1,
+                "timeZone": "GMT",
+                "userId": 101,
+                "utc": "1750335924.230418",
+                "viewId": 128
+            }
+        },
+        "ubCache": {
+            "v128": {
+                "cId": [
+                    "default_js"
+                ],
+                "la": 1750335924
+            }
+        }
+    },
+    "store": {
+        "action_add_elements": {},
+        "action_attribute_change": {},
+        "action_cnt": {},
+        "action_component_change": {},
+        "action_delete": {},
+        "action_label": {
+            "input": "Actions"
+        },
+        "action_update": {},
+        "btn_box": {},
+        "element_autocomplete": {
+            "data": [],
+            "filtered": []
+        },
+        "element_button": {},
+        "element_checkbox": {},
+        "element_checkbox_cnt": {},
+        "element_checkbox_label": {
+            "input": "checkbox"
+        },
+        "element_dialog": {},
+        "element_dialog_body": {},
+        "element_dialog_body_cnt": {},
+        "element_dialog_body_text_1": {
+            "input": "Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда приемлемые модификации, например, юмористические вставки или слова, которые даже отдалённо не напоминают латынь. Если вам нужен Lorem Ipsum для серьёзного проекта, вы наверняка не хотите какой-нибудь шутки, скрытой в середине абзаца. Также все другие известные генераторы Lorem Ipsum используют один и тот же текст, который они просто повторяют, пока не достигнут нужный объём. Это делает предлагаемый здесь генератор единственным настоящим Lorem Ipsum генератором. Он использует словарь из более чем 200 латинских слов, а также набор моделей предложений. В результате сгенерированный Lorem Ipsum выглядит правдоподобно, не имеет повторяющихся абзацей или невозможных слов."
+        },
+        "element_dialog_body_text_2": {
+            "input": "Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда приемлемые модификации, например, юмористические вставки или слова, которые даже отдалённо не напоминают латынь. Если вам нужен Lorem Ipsum для серьёзного проекта, вы наверняка не хотите какой-нибудь шутки, скрытой в середине абзаца. Также все другие известные генераторы Lorem Ipsum используют один и тот же текст, который они просто повторяют, пока не достигнут нужный объём. Это делает предлагаемый здесь генератор единственным настоящим Lorem Ipsum генератором. Он использует словарь из более чем 200 латинских слов, а также набор моделей предложений. В результате сгенерированный Lorem Ipsum выглядит правдоподобно, не имеет повторяющихся абзацей или невозможных слов."
+        },
+        "element_dialog_footer": {},
+        "element_dialog_footer_button_2": {},
+        "element_dialog_footer_cnt": {},
+        "element_dropdown": {},
+        "element_input_text": {},
+        "element_label": {
+            "input": "Form components"
+        },
+        "element_switch_container": {},
+        "form_components": {},
+        "splitter_left_cnt": {},
+        "splitter_left_datatable": {
+            "data": [
+                {
+                    "description": "It's a watch",
+                    "id": "1000",
+                    "name": "Bamboo Watch",
+                    "price": 65,
+                    "quantity": 24
+                },
+                {
+                    "description": "It's a black watch",
+                    "id": "10010",
+                    "name": "Black Watch",
+                    "price": 33,
+                    "quantity": 245
+                },
+                {
+                    "description": "It's a blue band",
+                    "id": "10020",
+                    "name": "Blue band",
+                    "price": 51,
+                    "quantity": 224
+                },
+                {
+                    "description": "It's a cool T-shirt",
+                    "id": "10030",
+                    "name": "Blue T-shirt",
+                    "price": 15,
+                    "quantity": 4
+                }
+            ],
+            "filter": {}
+        },
+        "splitter_left_description": {
+            "input": ""
+        },
+        "splitter_left_name": {
+            "input": ""
+        },
+        "splitter_left_price": {
+            "input": ""
+        },
+        "splitter_left_quantity": {
+            "input": ""
+        },
+        "splitter_main": {},
+        "splitter_right_cnt": {},
+        "splitter_right_datatable": {
+            "data": [
+                {
+                    "description": "It's a watch",
+                    "id": "1000",
+                    "name": "Bamboo Watch",
+                    "price": 65,
+                    "quantity": 24
+                },
+                {
+                    "description": "It's a black watch",
+                    "id": "10010",
+                    "name": "Black Watch",
+                    "price": 33,
+                    "quantity": 245
+                },
+                {
+                    "description": "It's a blue band",
+                    "id": "10020",
+                    "name": "Blue band",
+                    "price": 51,
+                    "quantity": 224
+                },
+                {
+                    "description": "It's a cool T-shirt",
+                    "id": "10030",
+                    "name": "Blue T-shirt",
+                    "price": 15,
+                    "quantity": 4
+                }
+            ],
+            "filter": {}
+        },
+        "splitter_right_description": {
+            "input": ""
+        },
+        "splitter_right_name": {
+            "input": ""
+        },
+        "splitter_right_price": {
+            "input": ""
+        },
+        "splitter_right_quantity": {
+            "input": ""
+        },
+        "splitter_right_tab_1": {},
+        "splitter_right_tab_1_1": {},
+        "splitter_right_tab_2": {},
+        "splitter_right_tab_2_1": {},
+        "splitter_right_tab_2_span": {
+            "input": "<b>The second tab</b>"
+        },
+        "splitter_right_tab_2_span_1": {
+            "input": "<b>The second tab</b>"
+        },
+        "splitter_right_tab_2_span_1_1": {
+            "input": "First tab"
+        },
+        "splitter_right_tab_3": {},
+        "splitter_right_tab_3_1": {},
+        "splitter_right_tab_3_span": {
+            "input": "this is the <u>third</u> tab!"
+        },
+        "splitter_right_tab_3_span_1": {
+            "input": "this is the <u>third</u> tab!"
+        },
+        "splitter_right_tabview": {
+            "active": {
+                "tabKey": "first"
+            }
+        },
+        "splitter_right_tabview_1": {
+            "active": {
+                "tabKey": "first"
+            }
+        },
+        "top_cnt": {},
+        "ub_container": {},
+        "ub_container_1": {},
+        "ub_input_switch1": {
+            "input": true
+        },
+        "ub_splitter": {},
+        "ub_switch_label": {
+            "input": "input switch"
+        },
+        "ub_vueFlow": {
+            "data": [
+                {
+                    "id": "1",
+                    "label": "Unirender",
+                    "position": {
+                        "x": 250,
+                        "y": 5
+                    },
+                    "type": "input"
+                },
+                {
+                    "id": "2",
+                    "label": "Action Service",
+                    "position": {
+                        "x": 20,
+                        "y": 80
+                    }
+                },
+                {
+                    "id": "3",
+                    "label": "Hook Service",
+                    "position": {
+                        "x": 80,
+                        "y": 160
+                    },
+                    "type": "output"
+                },
+                {
+                    "id": "4",
+                    "label": "Backend Service",
+                    "position": {
+                        "x": 140,
+                        "y": 240
+                    }
+                },
+                {
+                    "id": "5",
+                    "label": "Browser Service",
+                    "position": {
+                        "x": 200,
+                        "y": 320
+                    }
+                },
+                {
+                    "id": "6",
+                    "label": "Component Service",
+                    "position": {
+                        "x": 300,
+                        "y": 240
+                    }
+                },
+                {
+                    "id": "7",
+                    "label": "Config Service",
+                    "position": {
+                        "x": 360,
+                        "y": 180
+                    }
+                },
+                {
+                    "id": "8",
+                    "label": "Method Service",
+                    "position": {
+                        "x": 420,
+                        "y": 100
+                    }
+                },
+                {
+                    "id": "e1-3",
+                    "source": "1",
+                    "target": "3"
+                },
+                {
+                    "animated": true,
+                    "id": "e1-2",
+                    "source": "1",
+                    "target": "2"
+                },
+                {
+                    "id": "e1-4",
+                    "source": "1",
+                    "target": "4"
+                },
+                {
+                    "id": "e1-5",
+                    "source": "1",
+                    "target": "5"
+                },
+                {
+                    "id": "e1-6",
+                    "source": "1",
+                    "target": "6"
+                },
+                {
+                    "id": "e1-7",
+                    "source": "1",
+                    "target": "7"
+                },
+                {
+                    "id": "e1-8",
+                    "source": "1",
+                    "target": "8"
+                }
+            ]
+        },
+        "vueFlowSidebar": {},
+        "vueFlow_container": {}
+    },
+    "url": {
+        "host": "dev.unibackend.com",
+        "path": "/demo",
+        "protocol": "https:"
+    }
+}
