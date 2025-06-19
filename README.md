@@ -35,7 +35,7 @@ The modular architecture of the project allows for easy addition of new componen
     *   [Install UniRender package](#install-unirender-package)
     *   [Prompts to Setup Projects](#prompts-to-setup-projects)
 *   [Examples](#examples)
-    *   [UniRender Configs](#unirender-configs-builder)
+    *   [UniRender config builder](#unirender-config-builder)
     *   [Interactive Components](#interactive-components)
     *   [Tokling.com](#toklingcom)
     *   [Python Routes](#python-routes)
@@ -316,7 +316,7 @@ That’s all! Now your frontend is ready for work.
 
 ### API Request Format
 
-API request parameters from `window.uni.switch()`:
+API request parameters from [`window.uni.switch()`](#function-windowuniswitch)`:
 
 *   `url`:
     ```json
@@ -377,7 +377,7 @@ The response includes the [UniRender config](#unirender-config-format-detailed),
     ```
 *   `components`: A flat list of all [elements](#element) on the page. All container [elements](#element) specify which elements are included in them. The nesting level is unlimited.
 *   `store`: An object with dynamic keys; each [elements](#element) can have from 0 to several such keys. For example, a button might not have such a key, but a table has a key with an array of data (objects), a key for storing a list of selected records, a key with sort statuses, etc.
-*   `methods`: An object with methods that handle the necessary [elements](#element) events. Typically, this is a call to the `window.uni.switch()` function.
+*   `methods`: An object with methods that handle the necessary [elements](#element) events. Typically, this is a call to the [`window.uni.switch()`](#function-windowuniswitch) function.
 *   `service`: An object with auxiliary keys; these keys are not processed on the frontend.
 *   `url`: An object with the URL of the current page; this URL can include various parameters:
     ```json
@@ -391,16 +391,16 @@ The response includes the [UniRender config](#unirender-config-format-detailed),
       "tab_id": "active browser tab ID"
     }
     ```
-*   `actions`: `[{<action to run>}]` (Array of action objects.)
+*   [`actions`](#supported-actions): `[{<action to run>}]` (Array of action objects.)
 
 ### Logic of UniRender Operation
 
-1.  Upon first launch, it contacts the backend via the API URL. The request sends the "url" and "uniData" sections.
+1.  Upon first launch, it contacts the backend via the API URL. The [API request](#api-request-format) sends the "url" and "uniData" sections.
 2.  Upon receiving a response from the backend:
     *   Unpacks keys into [Storage](#structure-of-storage).
     *   During the first launch, it renders [elements](#element). Subsequently, element visualization changes due to component reactivity.
-    *   Executes actions.
-    *   For [elements](#element) with methods, it adds events that execute the `window.uni.switch()` function or a JavaScript script.
+    *   Executes [`actions`](#supported-actions).
+    *   For [elements](#element) with methods, it adds events that execute the [`window.uni.switch()`](#function-windowuniswitch) function or a JavaScript script.
 3.  When the `switch()` function is called, it forms and sends a request to the backend. Upon receiving a response, it proceeds to step 2.
 
 ## Structure of Storage
@@ -408,7 +408,7 @@ The response includes the [UniRender config](#unirender-config-format-detailed),
 The Storage JSON object has the following sections:
 
 *   `"components"`: Stores the settings for all [elements](#element). For each [element](#element), it specifies which keys in `"store"` and `"methods"` it is linked to.
-*   `"methods"`: A list of methods with JavaScript code. Typically, this is a call to the `window.uni.switch()` function.
+*   `"methods"`: A list of methods with JavaScript code. Typically, this is a call to the [`window.uni.switch()`](#function-windowuniswitch) function.
 *   `"params"`: `{"initUrl", "apiHost"}`
 *   `"store"`: Dynamic data that changes with the [element](#element) (input field content, selected records, etc.).
 *   `"service"`: An object with auxiliary data. A checksum is also saved for consistency verification.
@@ -420,9 +420,9 @@ For handling methods (e.g., a button click), the `window.uni.switch()` function 
 
 Parameters for calling `window.uni.switch()` from an [element](#element):
 
-*   `event`: Event object - mandatory.
-*   `props`: Props passed to the [element](#element) from which the event was called - mandatory.
-*   `uniKeys`: A list of keys from Storage, event, and props, whose values need to be sent in the request to the backend. Regex can be used - optional.
+*   `event`: Event object (mandatory).
+*   `props`: Props passed to the [element](#element) from which the event was called (mandatory).
+*   `uniKeys`: A list of keys from Storage, event, and props, whose values need to be sent in the request to the backend. Regex can be used (optional).
     *   Each key like `"components.my_element_1.attributes.label"` should be passed as an array of arrays:
         ```json
         [
@@ -440,8 +440,8 @@ Parameters for calling `window.uni.switch()` from an [element](#element):
         ]
         ```
 *   `js`: JavaScript code to execute on the frontend (optional). If specified, no API call occurs.
-*   `js-hooks`: `afterApply`, `beforeApply`. This is JavaScript code that will run before and after the `window.uni.switch()` call.
-*   `url`: Where to navigate. Object (optional):
+*   `js-hooks`: `afterApply`, `beforeApply` (op[tional). This is JavaScript code that will run before and after the `window.uni.switch()` call.
+*   `url`: Where to navigate (optional). Object format:
     ```json
     {
       "protocol": "https", // optional
@@ -459,8 +459,8 @@ Parameters for calling `window.uni.switch()` from an [element](#element):
 An array of objects describing actions. The rules are as follows:
 
 *   The moment an action triggers is determined by the "when" key.
-*   If "when" is not specified or is "beforeApply", the action will execute BEFORE data merge.
-*   If "when" is "afterApply", the action will execute AFTER data merge.
+*   If "when" is not specified or is "beforeApply", the action will execute BEFORE merge of a new [UniRender config](#unirender-config-format-detailed) and [Storage](#structure-of-storage) object.
+*   If "when" is "afterApply", the action will execute AFTER merge of a new [UniRender config](#unirender-config-format-detailed) and [Storage](#structure-of-storage) object.
 *   If an action needs to be executed with a delay, specify `"pauseBefore": <msec>`.
 
 List of actions:
@@ -658,13 +658,13 @@ In `head` are loaded page settings. Static data for all project pages can be loa
 
 ### `methods` (JSON-object)
 
-A call to `window.uni.switch()` or any JavaScript code that is executed by this method.
+A call to [`window.uni.switch()`](#function-windowuniswitch) or any JavaScript code that is executed by this method.
 
 The key of the `methods` object is the method name, as specified in "methods" when describing the [element](#element) (e.g., `"element_1-click"`).
 
 The property of the `methods` object is executable JavaScript code.
 
-When calling the function `window.uni.switch()`, the following parameters can be passed:
+When calling the function [`window.uni.switch()`](#function-windowuniswitch), the following parameters can be passed:
 
 *   `uniKeys`: A list of keys from [Storage](#structure-of-storage), event, and props, whose values need to be sent in the request to the backend. Regex can be used (optional).
     *   Each key like `"components.my_element_1.attributes.label"` should be passed as an array of arrays:
@@ -683,7 +683,7 @@ When calling the function `window.uni.switch()`, the following parameters can be
           ["regex", "^input_form_.*"]
         ]
         ```
-*   `js-hooks`: `beforeApply`, `afterApply`. This is JavaScript code that will run before and after the `window.uni.switch()` call.
+*   `js-hooks`: `beforeApply`, `afterApply`. This is JavaScript code that will run before and after the [`window.uni.switch()`](#function-windowuniswitch) call.
 
 **Example:**
 ```javascript
