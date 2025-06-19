@@ -185,7 +185,7 @@ The JavaScript library for the following tasks:
 
 ### Quick Deploy
 
-1.  Copy the “Build” folder into your Web project.
+1.  Copy the [“Build”](https://github.com/Sirius-AI-dev/unirender/tree/main/build) folder into your Web project.
     Dependencies are minimum:
     *   `"axios": "^1.6.0"`
     *   `"jsonpath-plus": "^7.2.0"`
@@ -264,7 +264,9 @@ await uniRender.start();
 
 ## Examples
 
-### UniRender config builder: [https://dev.unibackend.com/config](https://dev.unibackend.com/config)
+### UniRender config builder
+
+Run UniRender config builder: <https://dev.unibackend.com/config>
 
 View [UniRender config](https://github.com/Sirius-AI-dev/unirender/blob/main/examples/UniRender%20config/build_config.json)
 
@@ -272,7 +274,7 @@ You can make changes in the [UniRender config](#unirender-config-format-detailed
 
 ### Interactive Components
 
-Demo with interactive components: [https://dev.unibackend.com/demo](https://dev.unibackend.com/demo)
+Demo with interactive components: <https://dev.unibackend.com/demo>
 
 View [UniRender config](https://github.com/Sirius-AI-dev/unirender/blob/main/examples/UniRender%20config/demo_config.json)
 
@@ -280,7 +282,7 @@ Click buttons to change [elements](#element) layout and attributes.
 
 ### Tokling.com
 
-Multiplayer word battles to practise 42 foreign languages: [https://tokling.com](https://tokling.com)
+Multiplayer word battles to practise 42 foreign languages: <https://tokling.com>
 
 View [UniRender config](https://github.com/Sirius-AI-dev/unirender/blob/main/examples/UniRender%20config/toking_config.json)
 
