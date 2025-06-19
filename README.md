@@ -32,17 +32,18 @@ The modular architecture of the project allows for easy addition of new componen
     *   [UniRender (JS Library)](#unirender-js-library)
 *   [Installation](#installation)
     *   [Quick Deploy](#quick-deploy)
+    *   [Install UniRender package](#install-unirender-package)
     *   [Prompts to Setup Projects](#prompts-to-setup-projects)
 *   [Examples](#examples)
-    *   [UniRender Configs](#unirender-configs)
+    *   [UniRender Configs](#unirender-configs-builder)
     *   [Interactive Components](#interactive-components)
     *   [Tokling.com](#toklingcom)
     *   [Python Routes](#python-routes)
     *   [NodeJS Routes](#nodejs-routes)
 *   [Workflow](#workflow)
     *   [Preparation for Work](#preparation-for-work)
-    *   [Backend Response Format](#backend-response-format)
-    *   [Request to Backend Format](#request-to-backend-format)
+    *   [API Request Format](#api-request-format)
+    *   [API Response Format](#api-response-format)
     *   [Logic of UniRender Operation](#logic-of-unirender-operation)
 *   [Structure of Storage](#structure-of-storage)
 *   [Function `window.uni.switch()`](#function-windowuniswitch)
@@ -62,7 +63,7 @@ The modular architecture of the project allows for easy addition of new componen
     *   [`store` (JSON-object)](#store-json-object)
 *   [Component Wrapper](#component-wrapper)
     *   [Functionality](#functionality)
-    *   [`slotProps`](#slotprops)
+    *   [slotProps](#slotprops)
     *   [Store (Component-Specific)](#store-component-specific)
     *   [Props (Component-Specific)](#props-component-specific)
     *   [Methods (Component-Specific)](#methods-component-specific)
@@ -109,7 +110,7 @@ Detailed context for the entire project in a language understandable by LLMs:
 *   Backend logic of any complexity: all code is under developer control.
 *   Simple integration of third-party developers to extend the business logic of a specific event – using standard IDE tools.
 
-## UniRender Blocks in Existing Websites
+### UniRender Blocks in Existing Websites
 
 You can embed UniRender forms into any existing landing page / website without overhauling the entire site. Simply load `unirender.js` into a `<div>` container and set the correct `apiHost`.
 
@@ -729,7 +730,7 @@ A wrapper is (usually) a renderless component that has no layout but simply pass
 5.  Ensures two-way data binding (reactivity) between the component and data.
 6.  Extends component logic if necessary.
 
-### `slotProps`
+### slotProps
 
 `slotProps` are passed to any component!
 1.  `Data`: Component's store.
