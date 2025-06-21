@@ -10,6 +10,8 @@ Currently, the [VUE framework](https://vuejs.org/) is supported for rendering, w
 
 The modular architecture of the project allows for easy addition of new components and new frameworks (React, React Native, etc.). **Contributors are welcome to participate in the project's development**.
 
+[Link to github](https://github.com/Sirius-AI-dev/unirender)
+
 ## Table of Contents
 
 *   [How it Works](#how-it-works)
